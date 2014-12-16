@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'SpriteKitAutoLayout', :exclusive => true do
+  pod "SpriteKitAutoLayout", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "SpriteKitAutoLayout", :path => "../"
+
+  
+end
