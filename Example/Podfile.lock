@@ -1,0 +1,14 @@
+PODS:
+  - SpriteKitAutoLayout (0.1.0)
+
+DEPENDENCIES:
+  - SpriteKitAutoLayout (from `../`)
+
+EXTERNAL SOURCES:
+  SpriteKitAutoLayout:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SpriteKitAutoLayout: 18e5254081cbdb320f0ff8394c9f2bdf90e3dc76
+
+COCOAPODS: 0.35.0
