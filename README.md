@@ -20,7 +20,7 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-maksym.grebenets, maksym.grebenets@fairfaxmedia.com.au
+Maksym Grebenets, mgrebenets@gmail.com
 
 ## License
 
