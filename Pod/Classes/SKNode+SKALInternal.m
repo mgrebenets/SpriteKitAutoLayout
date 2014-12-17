@@ -20,13 +20,6 @@
 }
 
 - (SKALPlatformView *)layoutProxyView {
-    // if it ignores autolayout, avoid extra overhead and don't create proxy view
-    if (!self.isAutoLayoutEnabled) {
-        self.layoutProxyView = nil; // clean up if any
-        return nil;
-    }
-
-
     SKALPlatformView *internalLayoutProxyView = objc_getAssociatedObject(self, @selector(layoutProxyView));
 
     if (!internalLayoutProxyView) {

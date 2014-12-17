@@ -16,7 +16,7 @@ class MainScene: CommonScene {
             label.name = "label\(i)"
             label.horizontalAlignmentMode = .Right
             label.verticalAlignmentMode = .Baseline
-            label.setAutoLayoutEnabled(true)
+            label.autoLayoutEnabled = true
             addChild(label)
 
             var c = SKALLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 1)

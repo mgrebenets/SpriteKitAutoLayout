@@ -135,12 +135,18 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
     return namedNodes;
 }
 
+@dynamic autoLayoutEnabled;
 - (void)setAutoLayoutEnabled:(BOOL)enabled {
-    self.layoutProxyView.translatesAutoresizingMaskIntoConstraints = !enabled;
+    objc_setAssociatedObject(self, @selector(isAutoLayoutEnabled), @(enabled), OBJC_ASSOCIATION_ASSIGN);
+    if (enabled) {
+        self.layoutProxyView.translatesAutoresizingMaskIntoConstraints = NO;
+    } else {
+        self.layoutProxyView = nil;
+    }
 }
 
 - (BOOL)isAutoLayoutEnabled {
-    return self.layoutProxyView.translatesAutoresizingMaskIntoConstraints == NO;
+    return [objc_getAssociatedObject(self, @selector(isAutoLayoutEnabled)) boolValue];
 }
 
 - (void)layoutNodes {

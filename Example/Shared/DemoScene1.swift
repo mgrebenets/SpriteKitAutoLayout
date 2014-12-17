@@ -15,11 +15,11 @@ class DemoScene1: CommonScene {
         addBackButton()
 
         let label1 = SKLabelNode(text: "H:|[label1(W)] + V:|[label1(H)]")
-        label1.setAutoLayoutEnabled(true)
+        label1.autoLayoutEnabled = true
         label1.name = "label1"
         addChild(label1)
         let label2 = SKLabelNode(text: "H:[label2(W)]| + V:[label2(H)]|")
-        label2.setAutoLayoutEnabled(true)
+        label2.autoLayoutEnabled = true
         label2.name = "label2"
         addChild(label2)
 
@@ -27,14 +27,14 @@ class DemoScene1: CommonScene {
         // sized sprite with anchor at (0,0)
         let sizeSpriteAnchorZero = SKSpriteNode(color: SKColor.greenColor(), size: CGSizeZero)
         sizeSpriteAnchorZero.name = "sizeSpriteAnchorZero"
-        sizeSpriteAnchorZero.setAutoLayoutEnabled(true)
+        sizeSpriteAnchorZero.autoLayoutEnabled = true
         sizeSpriteAnchorZero.anchorPoint = CGPointZero
         addChild(sizeSpriteAnchorZero)
 
         // sized sprite with default anchor (0.5,0.5)
         let sizeSpriteAnchorDefault = SKSpriteNode(color: SKColor.yellowColor(), size: CGSizeZero)
         sizeSpriteAnchorDefault.name = "sizeSpriteAnchorDefault"
-        sizeSpriteAnchorDefault.setAutoLayoutEnabled(true)
+        sizeSpriteAnchorDefault.autoLayoutEnabled = true
         //        sizeSpriteAnchorDefault.anchorPoint = CGPointZero // default is 0.5, 0.5
         addChild(sizeSpriteAnchorDefault)
 
@@ -42,35 +42,35 @@ class DemoScene1: CommonScene {
         // sized sprite with anchor at (1,1)
         let sizeSpriteAnchorOneOne = SKSpriteNode(color: SKColor.blueColor(), size: CGSizeZero)
         sizeSpriteAnchorOneOne.name = "sizeSpriteAnchorOneOne"
-        sizeSpriteAnchorOneOne.setAutoLayoutEnabled(true)
+        sizeSpriteAnchorOneOne.autoLayoutEnabled = true
         sizeSpriteAnchorOneOne.anchorPoint = CGPointMake(1, 1)
         addChild(sizeSpriteAnchorOneOne)
 
         // sized sprite with anchor at (0,1)
         let sizeSpriteAnchorZeroOne = SKSpriteNode(color: SKColor.redColor(), size: CGSizeZero)
         sizeSpriteAnchorZeroOne.name = "sizeSpriteAnchorZeroOne"
-        sizeSpriteAnchorZeroOne.setAutoLayoutEnabled(true)
+        sizeSpriteAnchorZeroOne.autoLayoutEnabled = true
         sizeSpriteAnchorZeroOne.anchorPoint = CGPointMake(0, 1)
         addChild(sizeSpriteAnchorZeroOne)
 
         // sized sprite with anchor at (0.5,0)
         let sizeSpriteAnchorHalfZero = SKSpriteNode(color: SKColor.purpleColor(), size: CGSizeZero)
         sizeSpriteAnchorHalfZero.name = "sizeSpriteAnchorHalfZero"
-        sizeSpriteAnchorHalfZero.setAutoLayoutEnabled(true)
+        sizeSpriteAnchorHalfZero.autoLayoutEnabled = true
         sizeSpriteAnchorHalfZero.anchorPoint = CGPointMake(0.5, 0)
         addChild(sizeSpriteAnchorHalfZero)
 
         // sized sprite with anchor at (0.2,0.65)
         let sizeSpriteAnchorCustom = SKSpriteNode(color: SKColor.cyanColor(), size: CGSizeZero)
         sizeSpriteAnchorCustom.name = "sizeSpriteAnchorCustom"
-        sizeSpriteAnchorCustom.setAutoLayoutEnabled(true)
+        sizeSpriteAnchorCustom.autoLayoutEnabled = true
         sizeSpriteAnchorCustom.anchorPoint = CGPointMake(0.2, 0.65)
         addChild(sizeSpriteAnchorCustom)
 
         // sizeless node that contains buttons
         let buttonsNode = SKNode()
         buttonsNode.name = "buttonsNode"
-        buttonsNode.setAutoLayoutEnabled(true)
+        buttonsNode.autoLayoutEnabled = true
         addChild(buttonsNode)
 
 
@@ -122,13 +122,13 @@ class DemoScene1: CommonScene {
         // buttons inside buttons node
         var button1 = SKSpriteNode(color: SKColor.redColor(), size: CGSizeZero)
         button1.name = "button1"
-        button1.setAutoLayoutEnabled(true)
+        button1.autoLayoutEnabled = true
         var button2 = SKSpriteNode(color: SKColor.brownColor(), size: CGSizeZero)
         button2.name = "button2"
-        button2.setAutoLayoutEnabled(true)
+        button2.autoLayoutEnabled = true
         var button3 = SKSpriteNode(color: SKColor.orangeColor(), size: CGSizeZero)
         button3.name = "button3"
-        button3.setAutoLayoutEnabled(true)
+        button3.autoLayoutEnabled = true
 
         let buttons = [button1, button2, button3]
         buttons.map { buttonsNode.addChild($0) }

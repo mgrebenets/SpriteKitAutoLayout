@@ -50,15 +50,9 @@
 - (NSDictionary *)nodes;
 
 /**
- Enable or disable Auto layout
- By default it's disabled
+ Autolayout enabled property
  */
-- (void)setAutoLayoutEnabled:(BOOL)enabled;
-
-/**
- Returns Auto Layout Enabled property value
- */
-- (BOOL)isAutoLayoutEnabled;
+@property (nonatomic, assign, getter=isAutoLayoutEnabled) BOOL autoLayoutEnabled;
 
 /**
  Layout nodes recursively

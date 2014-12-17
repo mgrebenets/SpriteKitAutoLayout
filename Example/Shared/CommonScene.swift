@@ -14,7 +14,7 @@ class CommonScene: SKScene {
     func addBackButton() {
         let backButton = SKSpriteNode(imageNamed: "back")
         backButton.name = BackButtonName
-        backButton.setAutoLayoutEnabled(true)
+        backButton.autoLayoutEnabled = true
         addChild(backButton)
 
         // back button
