@@ -10,19 +10,19 @@
 Pod::Spec.new do |s|
   s.name             = "SpriteKitAutoLayout"
   s.version          = "0.1.0"
-  s.summary          = "A short description of SpriteKitAutoLayout."
+  s.summary          = "TODO: A short description of SpriteKitAutoLayout."
   s.description      = <<-DESC
-                       An optional longer description of SpriteKitAutoLayout
+                       TODO: An optional longer description of SpriteKitAutoLayout
 
                        * Markdown format.
                        * Don't worry about the indent, we strip it!
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/SpriteKitAutoLayout"
+  s.homepage         = "https://github.com/mgrebenets/SpriteKitAutoLayout"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "maksym.grebenets" => "maksym.grebenets@fairfaxmedia.com.au" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/SpriteKitAutoLayout.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { "Maksym Grebenets" => "mgrebenets@gmail.com" }
+  s.source           = { :git => "https://github.com/mgrebenets/SpriteKitAutoLayout.git", :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/mgrebenets'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
@@ -32,7 +32,6 @@ Pod::Spec.new do |s|
     'SpriteKitAutoLayout' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.public_header_files = 'Pod/Classes/SpriteKitAutoLayout.h'
+  s.frameworks = 'SpriteKit'
 end

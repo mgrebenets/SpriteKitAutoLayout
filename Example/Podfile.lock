@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SpriteKitAutoLayout: 18e5254081cbdb320f0ff8394c9f2bdf90e3dc76
+  SpriteKitAutoLayout: ea0b509a82b950f65b9c8a9e0aa91a7bf5fbce73
 
 COCOAPODS: 0.35.0
