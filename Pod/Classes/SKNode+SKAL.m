@@ -14,14 +14,18 @@
 #import "SKALUtils.h"
 
 /**
- Sizeable Node protocol
- So far it's SKSpriteNode and SKVideoNode
+ `SizeableNode` protocol used to work with sizeable nodes.
+ So far it's related `SKSpriteNode` and `SKVideoNode`.
  */
 @protocol SizeableNode <NSObject>
 @required
-// Anchor point
+/** 
+ Anchor point.
+ */
 @property (nonatomic) CGPoint anchorPoint;
-// Size
+/** 
+ Size.
+ */
 @property (nonatomic) CGSize size;
 @end
 
@@ -82,22 +86,22 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        // swizzle time!
+        // Swizzle time!
         Class nodeClass = [SKNode class];
 
-        // add child
+        // Add child
         SKALInjectMethod(nodeClass, @selector(addChild:), @selector(autoLayoutAddChild:), @selector(originalAddChild:));
 
-        // insert child
+        // Insert child
         SKALInjectMethod(nodeClass, @selector(insertChild:atIndex:), @selector(autoLayoutInsertChild:atIndex:), @selector(originalInsertChild:atIndex:));
 
-        // remove childred in array
+        // Remove childred in array
         SKALInjectMethod(nodeClass, @selector(removeChildrenInArray:), @selector(autoLayoutRemoveChildrenInArray:), @selector(originalRemoveChildrenInArray:));
 
-        // remove all children
+        // Remove all children
         SKALInjectMethod(nodeClass, @selector(removeAllChildren), @selector(autoLayoutRemoveAllChildren), @selector(originalRemoveAllChildren));
 
-        // remove from parent
+        // Remove from parent
         SKALInjectMethod(nodeClass, @selector(removeFromParent), @selector(autoLayoutRemoveFromParent), @selector(originalRemoveFromParent));
     });
 }
@@ -126,7 +130,7 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
 #pragma mark - Managing Layout
 - (NSDictionary *)nodes {
     NSMutableDictionary *namedNodes = [NSMutableDictionary dictionaryWithCapacity:self.children.count];
-    // return only those children which have names
+    // Return only those children which have names
     [self enumerateChildNodesWithName:@"*" usingBlock:^(SKNode *node, BOOL *stop) {
         if (![node.name isEqualToString:@""]) {
             namedNodes[node.name] = node;
@@ -181,10 +185,10 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
         // Sizeable vs Sizeless nodes
         if ([child respondsToSelector:@selector(setSize:)]) {
             SKNode<SizeableNode> *sizeableChild = (SKNode<SizeableNode> *)child;
-            // set the size
+            // Set the size
             sizeableChild.size = flippedFrame.size;
             // set the position using frame's origin and node's anchor point
-            // also take flip into account
+            // Also take flip into account
             sizeableChild.position = CGPointMake(flippedFrame.origin.x + sizeableChild.size.width * (sizeableChild.anchorPoint.x), flippedFrame.origin.y + sizeableChild.size.height * (sizeableChild.anchorPoint.y - self.class.flipMultiplier));
 
             SKALLogDebug(@"\n\tSizeable(%@)\n\tframe: %@\n\tsize: %@\n\tanchor: %@\n\tposition: %@", child.name, SKALNSStringFromRect(sizeableChild.frame), SKALNSStringFromSize(sizeableChild.size), SKALNSStringFromPoint(sizeableChild.anchorPoint), SKALNSStringFromPoint(sizeableChild.position));

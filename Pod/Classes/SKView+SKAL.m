@@ -16,7 +16,6 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKView_SKAL)
 // SKView AutoLayout category implementation
 @implementation SKView (SKAL)
 
-
 #pragma mark - Presenting Scene
 
 #pragma mark Original Selectors
@@ -38,13 +37,13 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKView_SKAL)
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        // swizzle time!
+        // Swizzle time!
         Class viewClass = [SKView class];
 
-        // present scene
+        // Present scene
         SKALInjectMethod(viewClass, @selector(presentScene:), @selector(autoLayoutPresentScene:), @selector(originalPresentScene:));
 
-        // present scene with transition
+        // Present scene with transition
         SKALInjectMethod(viewClass, @selector(presentScene:transition:), @selector(autoLayoutPresentScene:transition:), @selector(originalPresentScene:transition:));
     });
 }

@@ -34,7 +34,7 @@
 #pragma mark Flipped Geometry
 + (BOOL)isFlipped {
     // Return YES for UIKit/AppKit compatibility so that "V:|" alignemtns means "top"
-    // this is needed since SpriteKit has it's coordinate system origin at bottom left corner by default
+    // This is needed since SpriteKit has it's coordinate system origin at bottom left corner by default
     return YES;
 }
 

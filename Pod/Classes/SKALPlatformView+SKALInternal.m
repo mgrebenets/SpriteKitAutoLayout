@@ -15,7 +15,7 @@
 #if TARGET_OS_IPHONE
     [self insertSubview:view atIndex:index];
 #else
-    // for now just add subview
+    // For now just add subview
     [self addSubview:view];
 #endif
 }
@@ -24,7 +24,7 @@
 #if TARGET_OS_IPHONE
     [self layoutSubviews];
 #else
-    // for now just add subview
+    // For now just add subview
     [self layout];
 #endif
 }

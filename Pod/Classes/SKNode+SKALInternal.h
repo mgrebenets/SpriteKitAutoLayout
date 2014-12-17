@@ -10,17 +10,25 @@
 #import "SKALUtils.h"
 
 /**
- Internal SKNode Auto Layout category
+ Internal `SKNode` Auto Layout category.
  */
 @interface SKNode (SKALInternal)
 /**
- Internal layout proxy view
+ Internal layout proxy view.
+ Loaded laizily when node is added as a child.
+ For scenes set with container SKView when scene is presented.
  */
 @property (nonatomic, strong) SKALPlatformView *layoutProxyView;
 
-// Returns true if Y coordinate is flipped
+/**
+ Customazible Y coordinate flip flag.
+ @return `YES` if Y coordinate is flipped.
+ */
 + (BOOL)isFlipped;
 
-// Flip multiplier
+/** 
+ Flip multiplier.
+ @return Current flip multiplier.
+ */
 + (CGFloat)flipMultiplier;
 @end

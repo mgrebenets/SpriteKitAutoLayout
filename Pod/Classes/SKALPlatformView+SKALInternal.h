@@ -10,18 +10,27 @@
 @import SpriteKit;
 #import "SKALUtils.h"
 
-@interface SKALPlatformView (SKALInternal)
 /**
- Platform specific insert subview method
+ `SKALPlatformView` an adaptor category extending native platform view class (`UIView` or `NSView`).
+ */
+@interface SKALPlatformView (SKALInternal)
+
+/**
+ Platform specific insert subview method.
+ @param view The view to insert.
+ @param index Index to insert the view at.
  */
 - (void)SKALInsertSubview:(SKALPlatformView *)view atIndex:(NSInteger)index;
 
 /**
- Platform specific subviews layout
+ Platform specific subviews layout.
  */
 - (void)SKALLayoutSubviews;
+
 /**
- Returns view's layout rect (aka frame)
+ Returns view's layout rect (aka frame).
+ @return Layout frame.
  */
 - (CGRect)layoutRect;
+
 @end

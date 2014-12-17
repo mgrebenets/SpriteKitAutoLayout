@@ -10,18 +10,18 @@
 @import ObjectiveC.runtime;
 
 // Swizzle
-void SKALSwizzleMethod(Class c, SEL orig, SEL new) {
-    Method origMethod = class_getInstanceMethod(c, orig);
-    Method newMethod = class_getInstanceMethod(c, new);
-    if(class_addMethod(c, orig, method_getImplementation(newMethod), method_getTypeEncoding(newMethod))) {
-        class_replaceMethod(c, new, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
+void SKALSwizzleMethod(Class clazz, SEL originalSelector, SEL newSelector) {
+    Method originalMethod = class_getInstanceMethod(clazz, originalSelector);
+    Method newMethod = class_getInstanceMethod(clazz, newSelector);
+    if(class_addMethod(clazz, originalSelector, method_getImplementation(newMethod), method_getTypeEncoding(newMethod))) {
+        class_replaceMethod(clazz, newSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
     } else {
-        method_exchangeImplementations(origMethod, newMethod);
+        method_exchangeImplementations(originalMethod, newMethod);
     }
 }
 
 // Inject
-void SKALInjectMethod(Class c, SEL orig, SEL new, SEL backup) {
-    SKALSwizzleMethod(c, backup, orig);
-    SKALSwizzleMethod(c, orig, new);
+void SKALInjectMethod(Class clazz, SEL originalSelector, SEL newSelector, SEL backupSelector) {
+    SKALSwizzleMethod(clazz, backupSelector, originalSelector);
+    SKALSwizzleMethod(clazz, originalSelector, newSelector);
 }

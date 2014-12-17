@@ -9,7 +9,7 @@
 @import SpriteKit;
 
 /**
- SKView AutoLayout category
+ `SKView` AutoLayout category.
  */
 @interface SKView (SKAL)
 

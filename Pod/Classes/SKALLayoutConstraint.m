@@ -11,6 +11,7 @@
 
 @implementation SKALLayoutConstraint
 
+// Initialize with visual format
 + (NSArray *)constraintsWithVisualFormat:(NSString *)format
                                  options:(NSLayoutFormatOptions)opts
                                  metrics:(NSDictionary *)metrics
@@ -25,6 +26,7 @@
     return [NSLayoutConstraint constraintsWithVisualFormat:format options:opts metrics:metrics views:unwrappedViews];
 }
 
+// Initialize with items, attributes and relationship
 + (instancetype)constraintWithItem:(id)view1
                          attribute:(NSLayoutAttribute)attr1
                          relatedBy:(NSLayoutRelation)relation

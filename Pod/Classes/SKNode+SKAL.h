@@ -11,51 +11,58 @@
 #import "SKView+SKAL.h"
 
 /**
- Auto Layout extension for SKNode
+ Auto Layout extension for `SKNode`
  */
 @interface SKNode (SKAL)
 
 #pragma mark Managing Constraints
 /**
  Returns the constraints held by the view.
+ @return View contraints.
  */
 - (NSArray *)constraints;
 
 /**
  Adds a constraint on the layout of the receiving view or its subviews.
+ @param constraint Layout constraint.
  */
 - (void)addConstraint:(NSLayoutConstraint *)constraint;
 
 /**
  Adds multiple constraints on the layout of the receiving view or its subviews.
+ @param constraints Array of constraints to add.
  */
 - (void)addConstraints:(NSArray *)constraints;
 
 /**
  Removes the specified constraint from the view.
+ @param constraint Constraint to remove.
  */
 - (void)removeConstraint:(NSLayoutConstraint *)constraint;
 
 /**
  Removes the specified constraints from the view.
+ @param constraints Array of constraints to remove.
  */
 - (void)removeConstraints:(NSArray *)constraints;
 
 #pragma mark Managing Nodes Layout
 
 /**
- Returns dictionary of all child nodes that have name
- Use it for creating constraints with visual formatting language
+ Returns dictionary of all child nodes that have name.
+ Use it for creating constraints with visual formatting language.
+ @return Dictionary nodes that have name.
  */
 - (NSDictionary *)nodes;
 
 /**
- Autolayout enabled property
+ Autolayout enabled property.
+ Enable it for nodes that need to use Auto Layout.
  */
 @property (nonatomic, assign, getter=isAutoLayoutEnabled) BOOL autoLayoutEnabled;
 
 /**
- Layout nodes recursively
+ Layout nodes recursively.
  */
 - (void)layoutNodes;
 @end

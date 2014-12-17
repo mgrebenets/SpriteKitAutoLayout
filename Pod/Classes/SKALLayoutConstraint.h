@@ -9,7 +9,7 @@
 @import SpriteKit;
 
 /**
- NSLayoutConstraint subclass to be used with SpriteKit
+ `NSLayoutConstraint` subclass of `NSLayoutConstraint` used to create layout constraints for SpriteKit.
  */
 @interface SKALLayoutConstraint : NSLayoutConstraint
 
