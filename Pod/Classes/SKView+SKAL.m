@@ -16,29 +16,6 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKView_SKAL)
 // SKView AutoLayout category implementation
 @implementation SKView (SKAL)
 
-#pragma mark - Managing Subviews
-- (void)SKALInsertSubview:(SKView *)view atIndex:(NSInteger)index {
-#if TARGET_OS_IPHONE
-    [self insertSubview:view atIndex:index];
-#else
-    // for now just add subview
-    [self addSubview:view];
-#endif
-}
-
-- (void)SKALLayoutSubviews {
-#if TARGET_OS_IPHONE
-    [self layoutSubviews];
-#else
-    // for now just add subview
-    [self layout];
-#endif
-}
-
-#pragma mark - Layout Rect
-- (CGRect)layoutRect {
-    return self.frame;
-}
 
 #pragma mark - Presenting Scene
 
@@ -69,7 +46,6 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKView_SKAL)
 
         // present scene with transition
         SKALInjectMethod(viewClass, @selector(presentScene:transition:), @selector(autoLayoutPresentScene:transition:), @selector(originalPresentScene:transition:));
-
     });
 }
 

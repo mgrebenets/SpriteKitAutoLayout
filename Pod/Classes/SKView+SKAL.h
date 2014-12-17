@@ -12,19 +12,5 @@
  SKView AutoLayout category
  */
 @interface SKView (SKAL)
-/** 
- Platform specific insert subview method
- */
-- (void)SKALInsertSubview:(SKView *)view atIndex:(NSInteger)index;
-
-/** 
- Platform specific subviews layout
- */
-- (void)SKALLayoutSubviews;
-
-/** 
- Returns view's layout rect (aka frame)
- */
-- (CGRect)layoutRect;
 
 @end

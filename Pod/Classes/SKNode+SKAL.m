@@ -10,6 +10,7 @@
 
 #import "SKNode+SKAL.h"
 #import "SKNode+SKALInternal.h"
+#import "SKALPlatformView+SKALInternal.h"
 #import "SKALUtils.h"
 
 /**
@@ -123,6 +124,17 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
 }
 
 #pragma mark - Managing Layout
+- (NSDictionary *)nodes {
+    NSMutableDictionary *namedNodes = [NSMutableDictionary dictionaryWithCapacity:self.children.count];
+    // return only those children which have names
+    [self enumerateChildNodesWithName:@"*" usingBlock:^(SKNode *node, BOOL *stop) {
+        if (![node.name isEqualToString:@""]) {
+            namedNodes[node.name] = node;
+        }
+    }];
+    return namedNodes;
+}
+
 - (void)setAutoLayoutEnabled:(BOOL)enabled {
     self.layoutProxyView.translatesAutoresizingMaskIntoConstraints = !enabled;
 }

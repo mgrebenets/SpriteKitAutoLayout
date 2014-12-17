@@ -7,6 +7,7 @@
 //
 
 @import ObjectiveC.runtime;
+#import "SKNode+SKAL.h"
 #import "SKNode+SKALInternal.h"
 
 @implementation SKNode (SKALInternal)
@@ -14,17 +15,24 @@
 #pragma mark Layout Proxy View Property
 @dynamic layoutProxyView;
 
-- (void)setLayoutProxyView:(SKView *)layoutProxyView {
+- (void)setLayoutProxyView:(SKALPlatformView *)layoutProxyView {
     objc_setAssociatedObject(self, @selector(layoutProxyView), layoutProxyView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (SKView *)layoutProxyView {
-    SKView *internalLayoutProxyView = objc_getAssociatedObject(self, @selector(layoutProxyView));
+- (SKALPlatformView *)layoutProxyView {
+    // if it ignores autolayout, avoid extra overhead and don't create proxy view
+    if (!self.isAutoLayoutEnabled) {
+        self.layoutProxyView = nil; // clean up if any
+        return nil;
+    }
+
+
+    SKALPlatformView *internalLayoutProxyView = objc_getAssociatedObject(self, @selector(layoutProxyView));
 
     if (!internalLayoutProxyView) {
-        internalLayoutProxyView = [[SKView alloc] initWithFrame:self.frame];
+        internalLayoutProxyView = [[SKALPlatformView alloc] initWithFrame:self.frame];
         self.layoutProxyView = internalLayoutProxyView;
-        self.layoutProxyView.hidden = YES;  // want them hidden for less CPU load
+        self.layoutProxyView.hidden = YES;  // want them hidden, those are just proxies
     }
 
     return internalLayoutProxyView;

@@ -22,16 +22,13 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "Maksym Grebenets" => "mgrebenets@gmail.com" }
   s.source           = { :git => "https://github.com/mgrebenets/SpriteKitAutoLayout.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/mgrebenets'
+  s.social_media_url = 'https://twitter.com/mgrebenets'
 
-  s.platform     = :ios, '7.0'
+#s.platform     = :ios, '7.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes'
-  s.resource_bundles = {
-    'SpriteKitAutoLayout' => ['Pod/Assets/*.png']
-  }
-
-  s.public_header_files = 'Pod/Classes/SpriteKitAutoLayout.h'
+  s.public_header_files = ['Pod/Classes/**/*.h']
+  s.private_header_files = ['Pod/Classes/**/*Internal*.h']
   s.frameworks = 'SpriteKit'
 end

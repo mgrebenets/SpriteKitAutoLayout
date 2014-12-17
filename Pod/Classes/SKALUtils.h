@@ -10,10 +10,12 @@
  Cross platform defines
  */
 #if TARGET_OS_IPHONE
+#define SKALPlatformView UIView
 #define SKALNSStringFromRect NSStringFromCGRect
 #define SKALNSStringFromSize NSStringFromCGSize
 #define SKALNSStringFromPoint NSStringFromCGPoint
 #else
+#define SKALPlatformView NSView
 #define SKALNSStringFromRect NSStringFromRect
 #define SKALNSStringFromSize NSStringFromSize
 #define SKALNSStringFromPoint NSStringFromPoint

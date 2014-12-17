@@ -8,10 +8,5 @@
 
 // Umbrella Header
 
-#ifndef SpriteKitAutoLayout_SpriteKitAutoLayout_h
-#define SpriteKitAutoLayout_SpriteKitAutoLayout_h
-
 #import "SKNode+SKAL.h"
 #import "SKALLayoutConstraint.h"
-
-#endif

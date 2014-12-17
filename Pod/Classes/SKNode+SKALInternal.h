@@ -7,6 +7,7 @@
 //
 
 @import SpriteKit;
+#import "SKALUtils.h"
 
 /**
  Internal SKNode Auto Layout category
@@ -15,7 +16,7 @@
 /**
  Internal layout proxy view
  */
-@property (nonatomic, strong) SKView *layoutProxyView;
+@property (nonatomic, strong) SKALPlatformView *layoutProxyView;
 
 // Returns true if Y coordinate is flipped
 + (BOOL)isFlipped;

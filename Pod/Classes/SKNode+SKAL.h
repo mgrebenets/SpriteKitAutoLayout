@@ -41,7 +41,13 @@
  */
 - (void)removeConstraints:(NSArray *)constraints;
 
-#pragma mark Managing Layout
+#pragma mark Managing Nodes Layout
+
+/**
+ Returns dictionary of all child nodes that have name
+ Use it for creating constraints with visual formatting language
+ */
+- (NSDictionary *)nodes;
 
 /**
  Enable or disable Auto layout
