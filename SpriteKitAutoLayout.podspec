@@ -23,4 +23,5 @@ Pod::Spec.new do |s|
   s.public_header_files = ['Pod/Classes/**/*.h']
   s.private_header_files = ['Pod/Classes/**/*Internal*.h']
   s.frameworks = 'SpriteKit'
+#s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS[config=Debug]' => '$(inherited) SKAL_DEBUG=1' }
 end

@@ -11,6 +11,4 @@ end
 
 target 'Tests', :exclusive => true do
   pod "SpriteKitAutoLayout", :path => "../"
-
-  
 end

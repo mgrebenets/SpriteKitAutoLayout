@@ -35,51 +35,44 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
 // SKNode AutoLayout category implementation
 @implementation SKNode (SKAL)
 
-#pragma mark Original Child Management Selectors
-- (void)originalAddChild:(SKNode *)node { /* Stub */ }
-- (void)originalInsertChild:(SKNode *)node atIndex:(NSInteger)index { /* Stub */ }
-- (void)originalRemoveChildrenInArray:(NSArray *)nodes { /* Stub */ }
-- (void)originalRemoveAllChildren { /* Stub */ }
-- (void)originalRemoveFromParent { /* Stub */ }
-
 #pragma mark New Child Management Selectors
-- (void)autoLayoutAddChild:(SKNode *)node {
+- (void)SKALAddChild:(SKNode *)node {
     if (!node.layoutProxyView.superview) {
         [self.layoutProxyView addSubview:node.layoutProxyView];
     }
-    [self originalAddChild:node];
+    [self SKALAddChild:node];
 }
 
-- (void)autoLayoutInsertChild:(SKNode *)node atIndex:(NSInteger)index {
+- (void)SKALInsertChild:(SKNode *)node atIndex:(NSInteger)index {
     if (!node.layoutProxyView.superview) {
         [self.layoutProxyView SKALInsertSubview:node.layoutProxyView atIndex:index];
     }
-    [self originalInsertChild:node atIndex:index];
+    [self SKALInsertChild:node atIndex:index];
 }
 
-- (void)autoLayoutRemoveChildrenInArray:(NSArray *)nodes {
+- (void)SKALRemoveChildrenInArray:(NSArray *)nodes {
     for (SKNode *node in nodes) {
         if (node.layoutProxyView.superview) {
             [node.layoutProxyView removeFromSuperview];
         }
     }
-    [self originalRemoveChildrenInArray:nodes];
+    [self SKALRemoveChildrenInArray:nodes];
 }
 
-- (void)autoLayoutRemoveAllChildren {
+- (void)SKALRemoveAllChildren {
     for (SKNode *node in self.children) {
         if (node.layoutProxyView.superview) {
             [node.layoutProxyView removeFromSuperview];
         }
     }
-    [self originalRemoveAllChildren];
+    [self SKALRemoveAllChildren];
 }
 
-- (void)autoLayoutRemoveFromParent {
+- (void)SKALRemoveFromParent {
     if (self.layoutProxyView.superview) {
         [self.layoutProxyView removeFromSuperview];
     }
-    [self originalRemoveFromParent];
+    [self SKALRemoveFromParent];
 }
 
 #pragma mark Loading Category
@@ -87,22 +80,22 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         // Swizzle time!
-        Class nodeClass = [SKNode class];
+        Class nodeClass = [self class];
 
         // Add child
-        SKALInjectMethod(nodeClass, @selector(addChild:), @selector(autoLayoutAddChild:), @selector(originalAddChild:));
+        SKALSwizzleMethod(nodeClass, @selector(addChild:), @selector(SKALAddChild:));
 
         // Insert child
-        SKALInjectMethod(nodeClass, @selector(insertChild:atIndex:), @selector(autoLayoutInsertChild:atIndex:), @selector(originalInsertChild:atIndex:));
+        SKALSwizzleMethod(nodeClass, @selector(insertChild:atIndex:), @selector(SKALInsertChild:atIndex:));
 
         // Remove childred in array
-        SKALInjectMethod(nodeClass, @selector(removeChildrenInArray:), @selector(autoLayoutRemoveChildrenInArray:), @selector(originalRemoveChildrenInArray:));
+        SKALSwizzleMethod(nodeClass, @selector(removeChildrenInArray:), @selector(SKALRemoveChildrenInArray:));
 
         // Remove all children
-        SKALInjectMethod(nodeClass, @selector(removeAllChildren), @selector(autoLayoutRemoveAllChildren), @selector(originalRemoveAllChildren));
+        SKALSwizzleMethod(nodeClass, @selector(removeAllChildren), @selector(SKALRemoveAllChildren));
 
         // Remove from parent
-        SKALInjectMethod(nodeClass, @selector(removeFromParent), @selector(autoLayoutRemoveFromParent), @selector(originalRemoveFromParent));
+        SKALSwizzleMethod(nodeClass, @selector(removeFromParent), @selector(SKALRemoveFromParent));
     });
 }
 
@@ -154,8 +147,8 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
 }
 
 - (void)layoutNodes {
+    SKALLogDebug(@"\n===Layout for %@===", self.name);
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.layoutProxyView SKALLayoutSubviews];
         [self layoutNodesRecursively];
     });
 }
@@ -165,6 +158,10 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
 }
 
 - (void)layoutNodesRecursively {
+    // need to add layout proxy view each time
+    // there are cases like presenting scene for 1st time where nested nodes
+    // would not be sized properly without this call
+    [self.layoutProxyView SKALLayoutSubviews];
 
     // TODO: scene's anchor point will break things
 
@@ -172,7 +169,7 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
         // Ignore autolayout for those nodes which we did not create
         // for example a Sprite node with text inside SKLabelNode
         if (!child.isAutoLayoutEnabled) {
-            SKALLogDebug(@"Ignoring AutoLayout for child node\n\tName: %@\n\tClass: %@\n\tParent: %@", NSStringFromClass(child.class), child.name, self.name);
+            SKALLogDebug(@"\n\t--->Ignoring AutoLayout for child node\n\t\tName: %@\n\t\tClass: %@\n\t\tParent: %@", NSStringFromClass(child.class), child.name, self.name);
             continue;
         }
 
@@ -191,12 +188,12 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
             // Also take flip into account
             sizeableChild.position = CGPointMake(flippedFrame.origin.x + sizeableChild.size.width * (sizeableChild.anchorPoint.x), flippedFrame.origin.y + sizeableChild.size.height * (sizeableChild.anchorPoint.y - self.class.flipMultiplier));
 
-            SKALLogDebug(@"\n\tSizeable(%@)\n\tframe: %@\n\tsize: %@\n\tanchor: %@\n\tposition: %@", child.name, SKALNSStringFromRect(sizeableChild.frame), SKALNSStringFromSize(sizeableChild.size), SKALNSStringFromPoint(sizeableChild.anchorPoint), SKALNSStringFromPoint(sizeableChild.position));
+            SKALLogDebug(@"\tSizeable(%@)\n\tframe: %@\n\tsize: %@\n\tanchor: %@\n\tposition: %@", child.name, SKALNSStringFromRect(sizeableChild.frame), SKALNSStringFromSize(sizeableChild.size), SKALNSStringFromPoint(sizeableChild.anchorPoint), SKALNSStringFromPoint(sizeableChild.position));
         } else {
             // child position taking this child's frame into account and flip
             child.position = CGPointMake(flippedFrame.origin.x + CGRectGetWidth(child.frame) / 2, flippedFrame.origin.y - self.class.flipMultiplier * CGRectGetHeight(flippedFrame));
 
-            SKALLogDebug(@"\n\tSizeless(%@)\n\tframe: %@\n\tposition: %@", child.name, SKALNSStringFromRect(child.frame), SKALNSStringFromPoint(child.position));
+            SKALLogDebug(@"\tSizeless(%@)\n\tframe: %@\n\tposition: %@", child.name, SKALNSStringFromRect(child.frame), SKALNSStringFromPoint(child.position));
         }
 
         [child layoutNodesRecursively];

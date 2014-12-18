@@ -19,9 +19,3 @@ void SKALSwizzleMethod(Class clazz, SEL originalSelector, SEL newSelector) {
         method_exchangeImplementations(originalMethod, newMethod);
     }
 }
-
-// Inject
-void SKALInjectMethod(Class clazz, SEL originalSelector, SEL newSelector, SEL backupSelector) {
-    SKALSwizzleMethod(clazz, backupSelector, originalSelector);
-    SKALSwizzleMethod(clazz, originalSelector, newSelector);
-}

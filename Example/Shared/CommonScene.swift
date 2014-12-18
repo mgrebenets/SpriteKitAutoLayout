@@ -21,10 +21,10 @@ class CommonScene: SKScene {
         let nodesDic = nodes()
 
         var format = "H:|[\(BackButtonName)(80)]"
-        var constraints = SKALLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
+        var constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
         self.addConstraints(constraints)
         format = "V:[\(BackButtonName)(80)]|"
-        constraints = SKALLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
+        constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
         self.addConstraints(constraints)
     }
 

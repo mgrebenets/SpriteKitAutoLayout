@@ -18,19 +18,25 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKView_SKAL)
 
 #pragma mark - Presenting Scene
 
-#pragma mark Original Selectors
-- (void)originalPresentScene:(SKScene *)scene { /* Stub */ }
-- (void)originalPresentScene:(SKScene *)scene transition:(SKTransition *)transition { /* Stub */ }
-
 #pragma mark New Scene Management Selectors
-- (void)autoLayoutPresentScene:(SKScene *)scene {
+- (void)prepareForPresentingScene:(SKScene *)scene {
+    // if don't copy will crash on OSX because mutating array while enumerating
+    NSArray *subviews = [self.subviews copy];
+    for (SKALPlatformView *subview in subviews) {
+        [subview removeFromSuperview];
+    }
+    [scene.layoutProxyView removeConstraints:scene.layoutProxyView.constraints];
     scene.layoutProxyView = self;
-    [self originalPresentScene:scene];
 }
 
-- (void)autoLayoutPresentScene:(SKScene *)scene transition:(SKTransition *)transition {
-    scene.layoutProxyView = self;
-    [self originalPresentScene:scene transition:transition];
+- (void)SKALPresentScene:(SKScene *)scene {
+    [self prepareForPresentingScene:scene];
+    [self SKALPresentScene:scene];
+}
+
+- (void)SKALPresentScene:(SKScene *)scene transition:(SKTransition *)transition {
+    [self prepareForPresentingScene:scene];
+    [self SKALPresentScene:scene transition:transition];
 }
 
 #pragma mark Loading Category
@@ -38,13 +44,13 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKView_SKAL)
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         // Swizzle time!
-        Class viewClass = [SKView class];
+        Class viewClass = [self class];
 
         // Present scene
-        SKALInjectMethod(viewClass, @selector(presentScene:), @selector(autoLayoutPresentScene:), @selector(originalPresentScene:));
+        SKALSwizzleMethod(viewClass, @selector(presentScene:), @selector(SKALPresentScene:));
 
         // Present scene with transition
-        SKALInjectMethod(viewClass, @selector(presentScene:transition:), @selector(autoLayoutPresentScene:transition:), @selector(originalPresentScene:transition:));
+        SKALSwizzleMethod(viewClass, @selector(presentScene:transition:), @selector(SKALPresentScene:transition:));
     });
 }
 

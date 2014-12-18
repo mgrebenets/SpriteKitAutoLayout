@@ -24,7 +24,7 @@
 /**
  Logging
  */
-#ifdef SKAL_DEBUG
+#if SKAL_DEBUG
 #define SKALLogDebug(FORMAT, ...) fprintf(stderr,"%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #else
 #define SKALLogDebug(...)
@@ -42,13 +42,3 @@
  @param newSelector New selector to be used instead of original.
  */
 extern void SKALSwizzleMethod(Class clazz, SEL originalSelector, SEL newSelector);
-
-/**
- Inject method (backup original implementation and replace with new one).
- @param clazz Class for which the instance method will be injected.
- @param originalSelector Original selector to be replaced.
- @param newSelector New selector to be used instead of original.
- @param backupSelector Bakcup selector to keep the `originalSelector` for reuse.
- */
-extern void SKALInjectMethod(Class clazz, SEL originalSelector, SEL newSelector, SEL backupSelector);
-

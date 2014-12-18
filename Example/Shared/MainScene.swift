@@ -11,6 +11,8 @@ import SpriteKit
 class MainScene: CommonScene {
     override func didMoveToView(view: SKView) {
 
+        self.name = "MainScene"
+
         for i in 1...3 {
             var label = SKLabelNode(text: "Demo \(i)")
             label.name = "label\(i)"
@@ -19,15 +21,15 @@ class MainScene: CommonScene {
             label.autoLayoutEnabled = true
             addChild(label)
 
-            var c = SKALLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 1)
+            var c = NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 1)
             addConstraint(c)
         }
 
         var format = "V:|-20-[label1]-20-[label2(label1)]-20-[label3(label1)]-40-|"
-        var constraints = SKALLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodes())
+        var constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodes())
         addConstraints(constraints)
 
-        layoutNodes()
+//        layoutNodes()
     }
 
     override func handleTouchBeganAtLocation(location: CGPoint) {
@@ -45,7 +47,11 @@ class MainScene: CommonScene {
         if let scene = scene {
             let skView = self.view! as SKView
             scene.scaleMode = .ResizeFill
+            println("===Subviews count before: \(skView.subviews.count)")
+//            println("===Constraints count before: \(skView.constraints().count)")
             skView.presentScene(scene)
+            println("===Subviews count after: \(skView.subviews.count)")
+//            println("===Constraints count after: \(skView.constraints().count)")            
         }
     }
 }

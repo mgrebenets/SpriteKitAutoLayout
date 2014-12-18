@@ -12,6 +12,8 @@ class DemoScene1: CommonScene {
     override func didMoveToView(view: SKView) {
         // TODO:
 
+        self.name = "DemoScene1"
+        
         addBackButton()
 
         let label1 = SKLabelNode(text: "H:|[label1(W)] + V:|[label1(H)]")
@@ -73,27 +75,43 @@ class DemoScene1: CommonScene {
         buttonsNode.autoLayoutEnabled = true
         addChild(buttonsNode)
 
+        // buttons inside buttons node
+        var button1 = SKSpriteNode(color: SKColor.redColor(), size: CGSizeZero)
+        button1.name = "button1"
+        button1.autoLayoutEnabled = true
+        var button2 = SKSpriteNode(color: SKColor.brownColor(), size: CGSizeZero)
+        button2.name = "button2"
+        button2.autoLayoutEnabled = true
+        var button3 = SKSpriteNode(color: SKColor.orangeColor(), size: CGSizeZero)
+        button3.name = "button3"
+        button3.autoLayoutEnabled = true
+
+        let buttons = [button1, button2, button3]
+        buttons.map { buttonsNode.addChild($0) }
+
 
         // All the nodes are added, cached child nodes dictionary ro reuse later
         let nodesDic = nodes()
+
+        let buttonsNodesDic = buttonsNode.nodes()
 
         var format = ""
         var constraints = [AnyObject]()
 
         // labels layout
         format = "H:|[label1(\(Float(label2.frame.width)))]"
-        constraints = SKALLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
+        constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
         self.addConstraints(constraints)
         format = "V:|[label1(\(Float(label2.frame.height)))]"
-        constraints = SKALLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
+        constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
         self.addConstraints(constraints)
 
         format = "H:[label2(\(Float(label2.frame.width)))]|"
-        constraints = SKALLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
+        constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
         self.addConstraints(constraints)
 
         format = "V:[label2(\(Float(label2.frame.height)))]|"
-        constraints = SKALLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
+        constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
         self.addConstraints(constraints)
 
         // put all sized and anchored color sprites in the top right corner
@@ -110,61 +128,45 @@ class DemoScene1: CommonScene {
 
         for data in sizedSpritesLayoutData {
             var format = "H:[\(data.name)(\(Float(data.size)))]|"
-            var constraints = SKALLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
+            var constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
             self.addConstraints(constraints)
 
             format = "V:|[\(data.name)(\(Float(data.size)))]"
-            constraints = SKALLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
+            constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
             self.addConstraints(constraints)
 
         }
 
-        // buttons inside buttons node
-        var button1 = SKSpriteNode(color: SKColor.redColor(), size: CGSizeZero)
-        button1.name = "button1"
-        button1.autoLayoutEnabled = true
-        var button2 = SKSpriteNode(color: SKColor.brownColor(), size: CGSizeZero)
-        button2.name = "button2"
-        button2.autoLayoutEnabled = true
-        var button3 = SKSpriteNode(color: SKColor.orangeColor(), size: CGSizeZero)
-        button3.name = "button3"
-        button3.autoLayoutEnabled = true
-
-        let buttons = [button1, button2, button3]
-        buttons.map { buttonsNode.addChild($0) }
-
-        let buttonsNodesDic = buttonsNode.nodes()
-
         // tell buttons node to be in the center
         // by pinning it to superview
         format = "H:|-100-[buttonsNode]-120-|"
-        constraints = SKALLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
+        constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
         self.addConstraints(constraints)
 
         format = "V:|-100-[buttonsNode]-100-|"
-        constraints = SKALLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
+        constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
         self.addConstraints(constraints)
 
         // now tell the buttons to align themselves inside buttons node
 
         // use width of the parent
         format = "H:|[button1]|"
-        constraints = SKALLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: buttonsNodesDic)
+        constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: buttonsNodesDic)
         buttonsNode.addConstraints(constraints)
         format = "H:|[button2]|"
-        constraints = SKALLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: buttonsNodesDic)
+        constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: buttonsNodesDic)
         buttonsNode.addConstraints(constraints)
         format = "H:|[button3]|"
-        constraints = SKALLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: buttonsNodesDic)
+        constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: buttonsNodesDic)
         buttonsNode.addConstraints(constraints)
 
         // align vertically using custom padding
         // let the buttons resize their height, make sure height is same for all
         format = "V:|[button1]-40-[button2(button1)]-40-[button3(button1)]|"
-        constraints = SKALLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: buttonsNodesDic)
+        constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: buttonsNodesDic)
         buttonsNode.addConstraints(constraints)
         
-        layoutNodes()
+//        layoutNodes()
     }
 
     override func handleTouchBeganAtLocation(location: CGPoint) {
