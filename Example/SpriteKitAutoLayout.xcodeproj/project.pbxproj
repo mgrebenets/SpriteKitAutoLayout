@@ -21,6 +21,7 @@
 		589577E51A40F49C0071B4CB /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589577E41A40F49C0071B4CB /* SpriteKit.framework */; };
 		589577E61A40F4AE0071B4CB /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589577E41A40F49C0071B4CB /* SpriteKit.framework */; };
 		589577E91A41025E0071B4CB /* DemoScene1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589577E81A41025E0071B4CB /* DemoScene1.swift */; };
+		58EA688A1A43879000B16EB8 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EA68891A43879000B16EB8 /* Tests.swift */; };
 		58EA6ADD1A4123620069A377 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EA6ADC1A4123620069A377 /* AppDelegate.m */; };
 		58EA6ADF1A4123620069A377 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EA6ADE1A4123620069A377 /* main.m */; };
 		58EA6AE61A4123620069A377 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58EA6AE51A4123620069A377 /* Images.xcassets */; };
@@ -68,6 +69,8 @@
 		589577E41A40F49C0071B4CB /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		589577E71A41025E0071B4CB /* SpriteKitAutoLayout-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SpriteKitAutoLayout-Bridging-Header.h"; path = "SpriteKitAutoLayout/SpriteKitAutoLayout-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		589577E81A41025E0071B4CB /* DemoScene1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoScene1.swift; sourceTree = "<group>"; };
+		58EA68881A43878F00B16EB8 /* Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		58EA68891A43879000B16EB8 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		58EA6AD71A4123620069A377 /* SpriteKitAutoLayoutOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitAutoLayoutOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58EA6ADA1A4123620069A377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58EA6ADB1A4123620069A377 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -255,6 +258,7 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				58EA68891A43879000B16EB8 /* Tests.swift */,
 				6003F5BB195388D20070C39A /* Tests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
@@ -267,6 +271,7 @@
 				6003F5B7195388D20070C39A /* Tests-Info.plist */,
 				6003F5B8195388D20070C39A /* InfoPlist.strings */,
 				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
+				58EA68881A43878F00B16EB8 /* Tests-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -540,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				58EA688A1A43879000B16EB8 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,6 +742,7 @@
 			baseConfigurationReference = 5C646EF1D789DB9C3FF62F85 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpriteKitAutoLayout.app/SpriteKitAutoLayout";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -748,7 +755,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -759,6 +769,7 @@
 			baseConfigurationReference = 510BD2E90A965F38226783E8 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpriteKitAutoLayout.app/SpriteKitAutoLayout";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -767,7 +778,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

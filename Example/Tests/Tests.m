@@ -6,4 +6,26 @@
 //  Copyright (c) 2014 maksym.grebenets. All rights reserved.
 //
 
-${TEST_EXAMPLE}
+@import XCTest;
+#import "Tests-Swift.h"
+
+@interface SpriteKitAutoLayouTests: XCTestCase
+@end
+
+@implementation SpriteKitAutoLayouTests
+
+- (void)setUp {
+
+}
+
+- (void)tearDown {
+
+}
+
+- (void)testExample {
+    XCTAssert(TRUE, @"Pass");
+}
+
+@end
+
+

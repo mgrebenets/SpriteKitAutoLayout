@@ -1,14 +1,16 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'SpriteKitAutoLayout', :exclusive => true do
-  pod "SpriteKitAutoLayout", :path => "../"
+    platform :ios, '7.0'
+    pod "SpriteKitAutoLayout", :path => "../"
 end
 
 target 'SpriteKitAutoLayoutOSX', :exclusive => true do
-    platform :osx, '10.10'
+    platform :osx, '10.9'
     pod "SpriteKitAutoLayout", :path => "../"
 end
 
 target 'Tests', :exclusive => true do
-  pod "SpriteKitAutoLayout", :path => "../"
+    platform :ios, '7.0'
+    pod "SpriteKitAutoLayout", :path => "../"
 end
