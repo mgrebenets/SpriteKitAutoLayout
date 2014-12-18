@@ -10,8 +10,6 @@ import SpriteKit
 
 class DemoScene1: CommonScene {
     override func didMoveToView(view: SKView) {
-        // TODO:
-
         self.name = "DemoScene1"
         
         addBackButton()
@@ -120,12 +118,12 @@ class DemoScene1: CommonScene {
         // give them all different size to see how they align there
 
         let sizedSpritesLayoutData = [
-            (name: "sizeSpriteAnchorZero", size: 120),
-            (name: "sizeSpriteAnchorDefault", size: 100),
-            (name: "sizeSpriteAnchorOneOne", size: 80),
-            (name: "sizeSpriteAnchorZeroOne", size: 60),
-            (name: "sizeSpriteAnchorHalfZero", size: 40),
-            (name: "sizeSpriteAnchorCustom", size: 20),
+            (name: sizeSpriteAnchorZero.name!, size: 120),
+            (name: sizeSpriteAnchorDefault.name!, size: 100),
+            (name: sizeSpriteAnchorOneOne.name!, size: 80),
+            (name: sizeSpriteAnchorZeroOne.name!, size: 60),
+            (name: sizeSpriteAnchorHalfZero.name!, size: 40),
+            (name: sizeSpriteAnchorCustom.name!, size: 20),
         ]
 
         for data in sizedSpritesLayoutData {

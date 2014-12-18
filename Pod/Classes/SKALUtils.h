@@ -25,7 +25,7 @@
  Logging
  */
 
-#define SKAL_DEBUG  DEBUG
+#define SKAL_DEBUG  DEBUG   // TODO: remove for production
 
 #if SKAL_DEBUG
 #define SKALLogDebug(FORMAT, ...) fprintf(stderr,"%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
