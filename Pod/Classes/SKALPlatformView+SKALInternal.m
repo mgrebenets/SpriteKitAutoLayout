@@ -31,7 +31,10 @@
 
 #pragma mark - Layout Rect
 - (CGRect)layoutRect {
-    return self.frame;
+    // the root SKView's frame doesn't reflect rotation for iOS 7, fix it here
+    // works for iOS8 and OSX since SKView is always root and it's origin is zero
+    // yet returning frame for all other views is correct, since bounds doesn't have origin set
+    return [self isKindOfClass:[SKView class]] ? self.bounds : self.frame;
 }
 
 @end

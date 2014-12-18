@@ -14,7 +14,8 @@ class MainScene: CommonScene {
         self.name = "MainScene"
 
         for i in 1...3 {
-            var label = SKLabelNode(text: "Demo \(i)")
+            var label = SKLabelNode()
+            label.text = "Demo \(i)"
             label.name = "label\(i)"
             label.horizontalAlignmentMode = .Right
             label.verticalAlignmentMode = .Baseline

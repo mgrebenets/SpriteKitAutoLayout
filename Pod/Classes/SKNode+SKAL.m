@@ -155,6 +155,7 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
 
 + (CGRect)flippedFrame:(CGRect)frame inParentRect:(CGRect)parentRect {
     return CGRectOffset(frame, 0, (CGRectGetHeight(parentRect) - 2 * frame.origin.y) * self.flipMultiplier);
+//    return CGRectOffset(frame, 0, (CGRectGetHeight(parentRect) - 1 * frame.origin.y) * 1);
 }
 
 - (void)layoutNodesRecursively {

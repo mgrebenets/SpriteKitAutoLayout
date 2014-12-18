@@ -16,11 +16,13 @@ class DemoScene1: CommonScene {
         
         addBackButton()
 
-        let label1 = SKLabelNode(text: "H:|[label1(W)] + V:|[label1(H)]")
+        let label1 = SKLabelNode()
+        label1.text = "H:|[label1(W)] + V:|[label1(H)]"
         label1.autoLayoutEnabled = true
         label1.name = "label1"
         addChild(label1)
-        let label2 = SKLabelNode(text: "H:[label2(W)]| + V:[label2(H)]|")
+        let label2 = SKLabelNode()
+        label2.text = "H:[label2(W)]| + V:[label2(H)]|"
         label2.autoLayoutEnabled = true
         label2.name = "label2"
         addChild(label2)

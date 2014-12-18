@@ -24,6 +24,9 @@
 /**
  Logging
  */
+
+#define SKAL_DEBUG  DEBUG
+
 #if SKAL_DEBUG
 #define SKALLogDebug(FORMAT, ...) fprintf(stderr,"%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #else
