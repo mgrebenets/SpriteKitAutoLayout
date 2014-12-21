@@ -7,497 +7,412 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02B5B61018982BA0E2F3195E /* SKNode+SKALInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5233C40FF4AA46B90248A3 /* SKNode+SKALInternal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		06DFDBE9E0FE1B1AB5F004FD /* NSLayoutConstraint+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = 78BC6DD91917466A929EC8C5 /* NSLayoutConstraint+SKAL.h */; };
-		09B5E17FC40EBDFD53B86B17 /* SKNode+SKALInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CAE45380A27244CE1699F2 /* SKNode+SKALInternal.h */; };
-		0FF0E4C3EB34B107B40E33A4 /* Pods-SpriteKitAutoLayoutOSX-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2155A1B19481F1056E2C2A07 /* Pods-SpriteKitAutoLayoutOSX-dummy.m */; };
-		17DC7601AD7C281AA055578E /* SKALUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA35B9833061FB56443FA0D /* SKALUtils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1A7C61C7B4D793884DEB285A /* Pods-SpriteKitAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E400FA7A380A0EA6C3125 /* Pods-SpriteKitAutoLayout-dummy.m */; };
-		1BADB6571F5D31D58F45DB04 /* SKALPlatformView+SKALInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B61AD0FED82867AE6EA4993 /* SKALPlatformView+SKALInternal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1C52C41B387A8187E96CC0C1 /* NSLayoutConstraint+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EDFA27279EE1CA25AAF0A0 /* NSLayoutConstraint+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		21C272B8F2226A0A9345E2DC /* SKALPlatformView+SKALInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 76A24E7C5135B460E7DF66B5 /* SKALPlatformView+SKALInternal.h */; };
-		281755E6E4537869B8C3F075 /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B259144BC64A1BDCA8346C06 /* Pods-Tests-dummy.m */; };
-		3241DAD69A629276A9E1CA81 /* SKView+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A2841837DF013AD49EF39B /* SKView+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		375024B498030943F0507926 /* SpriteKitAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B61FC49E1D3A84910E266A9 /* SpriteKitAutoLayout.h */; };
-		38A3FF671033A51C0A5B339C /* SpriteKitAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B61FC49E1D3A84910E266A9 /* SpriteKitAutoLayout.h */; };
-		39A00A7AF3525D02E0F4B3E0 /* SKNode+SKALInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5233C40FF4AA46B90248A3 /* SKNode+SKALInternal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		419590E78A2FABF087F55324 /* SKView+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = FAB99F34B2D55F153B5C85C1 /* SKView+SKAL.h */; };
-		49B8EFC5D3372C4948F58B4C /* SKNode+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1D976A05F82D158CECCA61 /* SKNode+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4B552A985BCD39CC91686866 /* SKNode+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5EC1411151C8619356B4BC /* SKNode+SKAL.h */; };
-		57BD5263A6D8D2AC70E6E2BC /* SKNode+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1D976A05F82D158CECCA61 /* SKNode+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5AAF99EAF11587C55114EE94 /* SKALUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 708F5D2D9D1CC121FA2E30FC /* SKALUtils.h */; };
-		5B3018DD5A1CB9177C869FB6 /* SKALUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA35B9833061FB56443FA0D /* SKALUtils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5C05AE340FD151ADC864F9D4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829335D61C275E3782B02C48 /* Cocoa.framework */; };
-		6531EAADEFD63519022BE7EC /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E32FCB66E2A02E8C259569C /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-dummy.m */; };
-		6CAC8647013D16123189752C /* SKALPlatformView+SKALInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B61AD0FED82867AE6EA4993 /* SKALPlatformView+SKALInternal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		769A95BE9FC3420E37D8BE6E /* SKNode+SKALInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CAE45380A27244CE1699F2 /* SKNode+SKALInternal.h */; };
-		7A75057DBE180F9E1D7D90FD /* SKView+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A2841837DF013AD49EF39B /* SKView+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7AEB2B12E53A8CEFC0917CA7 /* SKALUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA35B9833061FB56443FA0D /* SKALUtils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		880FDFC12E5C03F8A73AE11A /* SKNode+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1D976A05F82D158CECCA61 /* SKNode+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		889611C3471092BE81BCE6C2 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDCC44D258F1ABD301049EC /* SpriteKit.framework */; };
-		91F4FEC319E1BE4D2665BB7C /* SKNode+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5EC1411151C8619356B4BC /* SKNode+SKAL.h */; };
-		96AC9D6383F8184F07A1D7E4 /* SpriteKitAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B61FC49E1D3A84910E266A9 /* SpriteKitAutoLayout.h */; };
-		9AF85BBBEFAA85909EA07EE8 /* SKNode+SKALInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CAE45380A27244CE1699F2 /* SKNode+SKALInternal.h */; };
-		9C67F19C9041AA595B1ECF94 /* NSLayoutConstraint+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = 78BC6DD91917466A929EC8C5 /* NSLayoutConstraint+SKAL.h */; };
-		A12C3363C862F4F9D5407AF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBE3EFBB9D697E99A970184 /* Foundation.framework */; };
-		AA7852F8AB4D0C9D87A612B9 /* SKView+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = FAB99F34B2D55F153B5C85C1 /* SKView+SKAL.h */; };
-		ACC78359EBF6A434434DAA76 /* SKALUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 708F5D2D9D1CC121FA2E30FC /* SKALUtils.h */; };
-		AF649F78CCFCF6725A3CDBD0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829335D61C275E3782B02C48 /* Cocoa.framework */; };
-		B4E7D470C68DF62428C41BDA /* SKALPlatformView+SKALInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 76A24E7C5135B460E7DF66B5 /* SKALPlatformView+SKALInternal.h */; };
-		BED7CA10B9F72362B3B67618 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6636925E6C07B463BFFBB49C /* SpriteKit.framework */; };
-		CBF4BCC32E38399EE8BE053F /* SKView+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A2841837DF013AD49EF39B /* SKView+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		CC9E3DBB7AECA036414F3D7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBE3EFBB9D697E99A970184 /* Foundation.framework */; };
-		D1A8C4C3D132F6005C27B0A6 /* SKALPlatformView+SKALInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B61AD0FED82867AE6EA4993 /* SKALPlatformView+SKALInternal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D32F298D0156C31AA8396E4D /* NSLayoutConstraint+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = 78BC6DD91917466A929EC8C5 /* NSLayoutConstraint+SKAL.h */; };
-		D3D5B2054CED30C5D9CE68A7 /* SKNode+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5EC1411151C8619356B4BC /* SKNode+SKAL.h */; };
-		D8594AB11A09F94A5066372B /* NSLayoutConstraint+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EDFA27279EE1CA25AAF0A0 /* NSLayoutConstraint+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		DCC85DF57095AD552A8FB376 /* SKALUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 708F5D2D9D1CC121FA2E30FC /* SKALUtils.h */; };
-		E2939DCE00250C3079A96B07 /* SKALPlatformView+SKALInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 76A24E7C5135B460E7DF66B5 /* SKALPlatformView+SKALInternal.h */; };
-		E2FB7A66FEEB751C372F6C80 /* SKNode+SKALInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5233C40FF4AA46B90248A3 /* SKNode+SKALInternal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		EC08DAAD4042E352EBFD1C40 /* SKView+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = FAB99F34B2D55F153B5C85C1 /* SKView+SKAL.h */; };
-		F04C32DE2B4739C8B4277935 /* NSLayoutConstraint+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EDFA27279EE1CA25AAF0A0 /* NSLayoutConstraint+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F08E5B81AF82968004B4AC63 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEFF2E126D7CEE9F8CF5410 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-dummy.m */; };
-		F121878ACFF8F6757F40941D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBE3EFBB9D697E99A970184 /* Foundation.framework */; };
-		F75CD1C0CA8C4BF4F8153B76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBE3EFBB9D697E99A970184 /* Foundation.framework */; };
-		F77F6AF59A46C6ED512087C8 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6636925E6C07B463BFFBB49C /* SpriteKit.framework */; };
-		FBA4ED0CAD3670ABBE8FE5F7 /* Pods-Tests-SpriteKitAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D6394DFDE22CEEC4F8094A /* Pods-Tests-SpriteKitAutoLayout-dummy.m */; };
+		0A30D87764A350321164E3FD /* SpriteKitAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 144C195D886BE518D3808D08 /* SpriteKitAutoLayout.h */; };
+		0BAAF5E9761C8F3826D930AB /* SKView+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0955B7F875323FA9A8F424 /* SKView+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0D08ECF3FF5F489AE4F5BA53 /* SKNode+SKALInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 097B4F355E5A8D72C44B2223 /* SKNode+SKALInternal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1737FD2EBBA746AEB15BECC3 /* SKNode+SKALInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = C762ECD4D773F316A1900F8F /* SKNode+SKALInternal.h */; };
+		202CC23BE7443E46D9A0A771 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559DB52D5AA6586433747944 /* SpriteKit.framework */; };
+		34E9719B5B2891D21F63FD5C /* SKView+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB59F9F54CF8333F8F9F393 /* SKView+SKAL.h */; };
+		38045F90BDEEC0CA547AB55B /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559DB52D5AA6586433747944 /* SpriteKit.framework */; };
+		381894B0C447081D34C4358E /* NSLayoutConstraint+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = F721D391873D53323E0DCDEE /* NSLayoutConstraint+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		393D05F2F80B178CE9D40994 /* SKALUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C22D4E0EF75A11DEF7F5535B /* SKALUtils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3BC7EFFE807A24C1B14957C1 /* SKALUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 46E8C8E48C0CB5C167A7D6AE /* SKALUtils.h */; };
+		3EF5DF39A9F6E018382093C9 /* Pods-Tests-SpriteKitAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C46D3812B8DD3B428E2FE562 /* Pods-Tests-SpriteKitAutoLayout-dummy.m */; };
+		41776146FDF1D96185A997BF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87CFE236D8021420ACBE7A5 /* Cocoa.framework */; };
+		4B535B4EF8EC52CF3D3ECBE0 /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A55301033A2C7A4E0078BA83 /* Pods-Tests-dummy.m */; };
+		51788338F8EDEEFAA991C17C /* SKNode+SKALInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 097B4F355E5A8D72C44B2223 /* SKNode+SKALInternal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		51ED8EF90D365B9B041E92C2 /* SKALPlatformView+SKALInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE125F6A889D0D41E6A4B9B /* SKALPlatformView+SKALInternal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		572D84E7A463B3D667D73130 /* SpriteKitAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 144C195D886BE518D3808D08 /* SpriteKitAutoLayout.h */; };
+		5F242D5CF6914FFEB5D6E9F9 /* SKALPlatformView+SKALInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE125F6A889D0D41E6A4B9B /* SKALPlatformView+SKALInternal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		70FCFD2288B17C46F630A7CA /* NSLayoutConstraint+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = 470C7F9D101883EBC46580C5 /* NSLayoutConstraint+SKAL.h */; };
+		760147622BEA01BD36AED855 /* NSLayoutConstraint+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = F721D391873D53323E0DCDEE /* NSLayoutConstraint+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7753DB3149A2D9E9A2E47030 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C392CE1590FFDCC870B72344 /* Foundation.framework */; };
+		7947667E644F0F06B9A884C6 /* SKNode+SKALInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = C762ECD4D773F316A1900F8F /* SKNode+SKALInternal.h */; };
+		7C4165D1AB60F5AEDD876B08 /* SKNode+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F7A9A97CF565CA04CD4C424 /* SKNode+SKAL.h */; };
+		7DF05A2CB41A93E33B5A1645 /* SKNode+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F7A9A97CF565CA04CD4C424 /* SKNode+SKAL.h */; };
+		80A51FDF80A7C299B15402FC /* SKView+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0955B7F875323FA9A8F424 /* SKView+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		85C8649CB65522CB265AE4AC /* SKALPlatformView+SKALInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 38750644B031381DC7F31649 /* SKALPlatformView+SKALInternal.h */; };
+		8C92C360F31573A061F27601 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C392CE1590FFDCC870B72344 /* Foundation.framework */; };
+		8E77000AFE84A4199996341B /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB8C9792E7C8AF6D22DA2F9 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-dummy.m */; };
+		919F28B69233ED0E8B24F3D7 /* SKView+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB59F9F54CF8333F8F9F393 /* SKView+SKAL.h */; };
+		92B3A48A7339CF5BF3BB7404 /* SKALUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 46E8C8E48C0CB5C167A7D6AE /* SKALUtils.h */; };
+		95DF5AAAD6E4B54119BAFE36 /* SKNode+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AD08AF72363338901A6A6E /* SKNode+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		96185B349519ED39A2482CD7 /* SKALPlatformView+SKALInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 38750644B031381DC7F31649 /* SKALPlatformView+SKALInternal.h */; };
+		970D47A7AB280EB15F2F0FE3 /* Pods-SpriteKitAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C7518C138AD71A82AB2CEA /* Pods-SpriteKitAutoLayout-dummy.m */; };
+		9793CAB629103EB7CAE880D1 /* NSLayoutConstraint+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = F721D391873D53323E0DCDEE /* NSLayoutConstraint+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9886A5EC9A8A02FA7317854D /* SKALUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C22D4E0EF75A11DEF7F5535B /* SKALUtils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9E52AB06BF9A333E7D849D18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C392CE1590FFDCC870B72344 /* Foundation.framework */; };
+		A3A895805742BDFE56221DEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C392CE1590FFDCC870B72344 /* Foundation.framework */; };
+		A3E6D5877DA308CE86F0A182 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6742EBB413CAE51101804FF2 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-dummy.m */; };
+		B2BF5B4EE6AA428A0E3BFF8B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87CFE236D8021420ACBE7A5 /* Cocoa.framework */; };
+		B799719CB04F075293086745 /* SKALPlatformView+SKALInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 38750644B031381DC7F31649 /* SKALPlatformView+SKALInternal.h */; };
+		C02DF4B6BECE8F756F865010 /* NSLayoutConstraint+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = 470C7F9D101883EBC46580C5 /* NSLayoutConstraint+SKAL.h */; };
+		C28787A0E4EC87FFF4B8DD52 /* SKALPlatformView+SKALInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE125F6A889D0D41E6A4B9B /* SKALPlatformView+SKALInternal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D0A39C6687F4EB735ECA9382 /* SKNode+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F7A9A97CF565CA04CD4C424 /* SKNode+SKAL.h */; };
+		D1687FE817A86D3FC66059F0 /* SKNode+SKALInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = C762ECD4D773F316A1900F8F /* SKNode+SKALInternal.h */; };
+		D21861CE06508A47004DA0AC /* Pods-SpriteKitAutoLayoutOSX-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7842F4ED162A6099E11973 /* Pods-SpriteKitAutoLayoutOSX-dummy.m */; };
+		DEFA36402A66E35AB93A6AA5 /* SKNode+SKALInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 097B4F355E5A8D72C44B2223 /* SKNode+SKALInternal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DF38C94FE2B3DEF4785667BF /* SKNode+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AD08AF72363338901A6A6E /* SKNode+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E5396B88866B62D147C87071 /* SKNode+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AD08AF72363338901A6A6E /* SKNode+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E754735D44F392B5CBEFE438 /* NSLayoutConstraint+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = 470C7F9D101883EBC46580C5 /* NSLayoutConstraint+SKAL.h */; };
+		E8F115F90BD58665E65E6B3F /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB383EEF5DFD30A6E766935 /* SpriteKit.framework */; };
+		F1316EE450585E8895CBC203 /* SpriteKitAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 144C195D886BE518D3808D08 /* SpriteKitAutoLayout.h */; };
+		F25B81C1AE0E84B34CBBB9D1 /* SKALUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 46E8C8E48C0CB5C167A7D6AE /* SKALUtils.h */; };
+		F6F169000998EF6C5B3FD4BF /* SKView+SKAL.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB59F9F54CF8333F8F9F393 /* SKView+SKAL.h */; };
+		FC1174B7672FA27D587ECD1B /* SKView+SKAL.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0955B7F875323FA9A8F424 /* SKView+SKAL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FD5CCC1B13424CD0CA6D5B08 /* SKALUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C22D4E0EF75A11DEF7F5535B /* SKALUtils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1B9A9C54C2EFF26B165A299E /* PBXContainerItemProxy */ = {
+		420C35712F9244447ED63860 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2D18FF17984F8A60DF994E5F /* Project object */;
+			containerPortal = 9FED8176AD28BA132BB15853 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C6870AABACDC35B806FEDA65;
-			remoteInfo = "Pods-Tests-SpriteKitAutoLayout";
-		};
-		225F48F4E2DA408CC683158A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2D18FF17984F8A60DF994E5F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 811D7B5D74BD3C429E928927;
+			remoteGlobalIDString = EB6CBC889FB4FB67023AAF51;
 			remoteInfo = "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout";
 		};
-		C97BB9F302E2F8C5EA376B8B /* PBXContainerItemProxy */ = {
+		63ABEFA0F9BCA3CDCB39A4F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2D18FF17984F8A60DF994E5F /* Project object */;
+			containerPortal = 9FED8176AD28BA132BB15853 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E2788EBC176448E5A132C8B0;
+			remoteGlobalIDString = 0829BEB52DD8D805D9397A5B;
 			remoteInfo = "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout";
+		};
+		E1F22387ED8AF339EC7A3821 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FED8176AD28BA132BB15853 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2B747ABC15BF4BB8B4419D4;
+			remoteInfo = "Pods-Tests-SpriteKitAutoLayout";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		016B9C280C2FD7F4207B211F /* libPods-SpriteKitAutoLayout-SpriteKitAutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpriteKitAutoLayout-SpriteKitAutoLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		05AC32DCEC85459D1538ED30 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		0687846D0EC3528A695E7323 /* Pods-SpriteKitAutoLayoutOSX-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SpriteKitAutoLayoutOSX-acknowledgements.markdown"; sourceTree = "<group>"; };
-		07315A608A43B4605B8F34D5 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A0B91C110032E5CB18D76F7 /* Pods-SpriteKitAutoLayout-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SpriteKitAutoLayout-resources.sh"; sourceTree = "<group>"; };
-		1088C07DE0C6B9B0DFE071FA /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout.xcconfig"; sourceTree = "<group>"; };
-		1CBEFD83EBADEE1A4C688D5E /* libPods-SpriteKitAutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpriteKitAutoLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		210596BA408343E7736ADDEC /* Pods-Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-resources.sh"; sourceTree = "<group>"; };
-		214148AD4B91A97096CE4222 /* Pods-Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		2155A1B19481F1056E2C2A07 /* Pods-SpriteKitAutoLayoutOSX-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SpriteKitAutoLayoutOSX-dummy.m"; sourceTree = "<group>"; };
-		2B61FC49E1D3A84910E266A9 /* SpriteKitAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpriteKitAutoLayout.h; path = Pod/Classes/SpriteKitAutoLayout.h; sourceTree = "<group>"; };
-		2DB8DE2293E4DA966D93919B /* Pods-SpriteKitAutoLayoutOSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpriteKitAutoLayoutOSX.debug.xcconfig"; sourceTree = "<group>"; };
-		3655A61357923368DD3D9BAC /* Pods-SpriteKitAutoLayoutOSX-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SpriteKitAutoLayoutOSX-environment.h"; sourceTree = "<group>"; };
-		382806663A0C8B3A096E33E6 /* libPods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B0E400FA7A380A0EA6C3125 /* Pods-SpriteKitAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SpriteKitAutoLayout-dummy.m"; sourceTree = "<group>"; };
-		434D96599448E4D7513E8354 /* Pods-Tests-SpriteKitAutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Tests-SpriteKitAutoLayout-prefix.pch"; path = "../Pods-Tests-SpriteKitAutoLayout/Pods-Tests-SpriteKitAutoLayout-prefix.pch"; sourceTree = "<group>"; };
-		4A5233C40FF4AA46B90248A3 /* SKNode+SKALInternal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SKNode+SKALInternal.m"; path = "Pod/Classes/SKNode+SKALInternal.m"; sourceTree = "<group>"; };
-		4E32FCB66E2A02E8C259569C /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-dummy.m"; path = "../Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout/Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-dummy.m"; sourceTree = "<group>"; };
-		50EDFA27279EE1CA25AAF0A0 /* NSLayoutConstraint+SKAL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+SKAL.m"; path = "Pod/Classes/NSLayoutConstraint+SKAL.m"; sourceTree = "<group>"; };
-		549351DDD9B696C2F14A6396 /* libPods-SpriteKitAutoLayoutOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpriteKitAutoLayoutOSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		55CAE45380A27244CE1699F2 /* SKNode+SKALInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKNode+SKALInternal.h"; path = "Pod/Classes/SKNode+SKALInternal.h"; sourceTree = "<group>"; };
-		5A178315E0F4E06636255228 /* Pods-Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5A6DB2CDE84808C5C917A608 /* Pods-SpriteKitAutoLayoutOSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpriteKitAutoLayoutOSX.release.xcconfig"; sourceTree = "<group>"; };
-		5D3B2823B18EB59A17340960 /* Pods-Tests-SpriteKitAutoLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-SpriteKitAutoLayout.xcconfig"; path = "../Pods-Tests-SpriteKitAutoLayout/Pods-Tests-SpriteKitAutoLayout.xcconfig"; sourceTree = "<group>"; };
-		636F648964885AC723CA40D1 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-prefix.pch"; sourceTree = "<group>"; };
-		6636925E6C07B463BFFBB49C /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
-		6A5191F8099642A9D89FA16D /* Pods-SpriteKitAutoLayoutOSX-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SpriteKitAutoLayoutOSX-acknowledgements.plist"; sourceTree = "<group>"; };
-		708F5D2D9D1CC121FA2E30FC /* SKALUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKALUtils.h; path = Pod/Classes/SKALUtils.h; sourceTree = "<group>"; };
-		76A24E7C5135B460E7DF66B5 /* SKALPlatformView+SKALInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKALPlatformView+SKALInternal.h"; path = "Pod/Classes/SKALPlatformView+SKALInternal.h"; sourceTree = "<group>"; };
-		78BC6DD91917466A929EC8C5 /* NSLayoutConstraint+SKAL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+SKAL.h"; path = "Pod/Classes/NSLayoutConstraint+SKAL.h"; sourceTree = "<group>"; };
-		7D1D976A05F82D158CECCA61 /* SKNode+SKAL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SKNode+SKAL.m"; path = "Pod/Classes/SKNode+SKAL.m"; sourceTree = "<group>"; };
-		7DDCC44D258F1ABD301049EC /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
-		7E35805098B2FF583555FA37 /* Pods-SpriteKitAutoLayout-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SpriteKitAutoLayout-environment.h"; sourceTree = "<group>"; };
-		829335D61C275E3782B02C48 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		8B61AD0FED82867AE6EA4993 /* SKALPlatformView+SKALInternal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SKALPlatformView+SKALInternal.m"; path = "Pod/Classes/SKALPlatformView+SKALInternal.m"; sourceTree = "<group>"; };
-		8D260B2808E3A262804B28E4 /* Pods-Tests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-environment.h"; sourceTree = "<group>"; };
-		9768589AFEF9B6CBFEBE8BC6 /* libPods-Tests-SpriteKitAutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-SpriteKitAutoLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA288E5AA79672E79AC168F3 /* Pods-SpriteKitAutoLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpriteKitAutoLayout.release.xcconfig"; sourceTree = "<group>"; };
-		AF5EC1411151C8619356B4BC /* SKNode+SKAL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKNode+SKAL.h"; path = "Pod/Classes/SKNode+SKAL.h"; sourceTree = "<group>"; };
-		B09A769AA5B60B61D97A94C2 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-Private.xcconfig"; path = "../Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout/Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-Private.xcconfig"; sourceTree = "<group>"; };
-		B259144BC64A1BDCA8346C06 /* Pods-Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-dummy.m"; sourceTree = "<group>"; };
-		B2D6394DFDE22CEEC4F8094A /* Pods-Tests-SpriteKitAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Tests-SpriteKitAutoLayout-dummy.m"; path = "../Pods-Tests-SpriteKitAutoLayout/Pods-Tests-SpriteKitAutoLayout-dummy.m"; sourceTree = "<group>"; };
-		B614C586286C25424DED757D /* Pods-Tests-SpriteKitAutoLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-SpriteKitAutoLayout-Private.xcconfig"; path = "../Pods-Tests-SpriteKitAutoLayout/Pods-Tests-SpriteKitAutoLayout-Private.xcconfig"; sourceTree = "<group>"; };
-		BAEFF2E126D7CEE9F8CF5410 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-dummy.m"; sourceTree = "<group>"; };
-		BB72800AD7F88295E7EEFB96 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-Private.xcconfig"; sourceTree = "<group>"; };
-		CA2240D2C0FDEE6F5B12DD75 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.xcconfig"; path = "../Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout/Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.xcconfig"; sourceTree = "<group>"; };
-		CCA35B9833061FB56443FA0D /* SKALUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SKALUtils.m; path = Pod/Classes/SKALUtils.m; sourceTree = "<group>"; };
-		CF551C166B6FE7E8B819B6AC /* Pods-SpriteKitAutoLayoutOSX-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SpriteKitAutoLayoutOSX-resources.sh"; sourceTree = "<group>"; };
-		DD12B0E6BB8AEEABD9253982 /* Pods-SpriteKitAutoLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpriteKitAutoLayout.debug.xcconfig"; sourceTree = "<group>"; };
-		DE142DF931F5870A638C36C3 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-prefix.pch"; path = "../Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout/Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-prefix.pch"; sourceTree = "<group>"; };
-		DEF5FD52E2419C401FE668FA /* Pods-SpriteKitAutoLayout-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SpriteKitAutoLayout-acknowledgements.plist"; sourceTree = "<group>"; };
-		E0A2841837DF013AD49EF39B /* SKView+SKAL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SKView+SKAL.m"; path = "Pod/Classes/SKView+SKAL.m"; sourceTree = "<group>"; };
-		E48B14696131046A35F8BC97 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		E901B2E7BB1D24DA7FF9B6EC /* Pods-SpriteKitAutoLayout-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SpriteKitAutoLayout-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FAB99F34B2D55F153B5C85C1 /* SKView+SKAL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKView+SKAL.h"; path = "Pod/Classes/SKView+SKAL.h"; sourceTree = "<group>"; };
-		FDBE3EFBB9D697E99A970184 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		FFBBE3B5F912F3E69D7C4F58 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		02F68266EBADED092CE007AB /* Pods-SpriteKitAutoLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpriteKitAutoLayout.debug.xcconfig"; sourceTree = "<group>"; };
+		097B4F355E5A8D72C44B2223 /* SKNode+SKALInternal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SKNode+SKALInternal.m"; path = "Pod/Classes/SKNode+SKALInternal.m"; sourceTree = "<group>"; };
+		0B47E612711C255F604F665C /* libPods-Tests-SpriteKitAutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-SpriteKitAutoLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CAB302B75D8AC0E7C7994A0 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D2607A43588DADE850DB35C /* Pods-Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		0E8FA07EF3E146D985E55323 /* libPods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		144C195D886BE518D3808D08 /* SpriteKitAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpriteKitAutoLayout.h; path = Pod/Classes/SpriteKitAutoLayout.h; sourceTree = "<group>"; };
+		1DF27DCB43DB68AFBB35A5CD /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout.xcconfig"; sourceTree = "<group>"; };
+		26C7518C138AD71A82AB2CEA /* Pods-SpriteKitAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SpriteKitAutoLayout-dummy.m"; sourceTree = "<group>"; };
+		2BE125F6A889D0D41E6A4B9B /* SKALPlatformView+SKALInternal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SKALPlatformView+SKALInternal.m"; path = "Pod/Classes/SKALPlatformView+SKALInternal.m"; sourceTree = "<group>"; };
+		2D5C3D412DBC32C59885010E /* Pods-SpriteKitAutoLayoutOSX-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SpriteKitAutoLayoutOSX-environment.h"; sourceTree = "<group>"; };
+		2F7A9A97CF565CA04CD4C424 /* SKNode+SKAL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKNode+SKAL.h"; path = "Pod/Classes/SKNode+SKAL.h"; sourceTree = "<group>"; };
+		38750644B031381DC7F31649 /* SKALPlatformView+SKALInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKALPlatformView+SKALInternal.h"; path = "Pod/Classes/SKALPlatformView+SKALInternal.h"; sourceTree = "<group>"; };
+		3ECF611913CBDE70ED64E6BC /* Pods-SpriteKitAutoLayoutOSX-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SpriteKitAutoLayoutOSX-acknowledgements.markdown"; sourceTree = "<group>"; };
+		41710B6A5F66B58572693358 /* libPods-SpriteKitAutoLayoutOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpriteKitAutoLayoutOSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4230E039A309E865FCCF23EE /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.xcconfig"; path = "../Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout/Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.xcconfig"; sourceTree = "<group>"; };
+		45D092C7A1562701B8EE4215 /* Pods-SpriteKitAutoLayoutOSX-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SpriteKitAutoLayoutOSX-acknowledgements.plist"; sourceTree = "<group>"; };
+		4606A96DACEC064F6DD87E75 /* Pods-SpriteKitAutoLayoutOSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpriteKitAutoLayoutOSX.debug.xcconfig"; sourceTree = "<group>"; };
+		46E8C8E48C0CB5C167A7D6AE /* SKALUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKALUtils.h; path = Pod/Classes/SKALUtils.h; sourceTree = "<group>"; };
+		470C7F9D101883EBC46580C5 /* NSLayoutConstraint+SKAL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+SKAL.h"; path = "Pod/Classes/NSLayoutConstraint+SKAL.h"; sourceTree = "<group>"; };
+		4909F4245FAA40BC0C81E1F8 /* Pods-SpriteKitAutoLayout-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SpriteKitAutoLayout-acknowledgements.plist"; sourceTree = "<group>"; };
+		529D9D9D50BA491870807C61 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		559DB52D5AA6586433747944 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
+		59E0BDCA408E975184E73B97 /* Pods-SpriteKitAutoLayoutOSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpriteKitAutoLayoutOSX.release.xcconfig"; sourceTree = "<group>"; };
+		6742EBB413CAE51101804FF2 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-dummy.m"; path = "../Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout/Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-dummy.m"; sourceTree = "<group>"; };
+		6840BECBD9FDF8BF496D0FF9 /* Pods-Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-resources.sh"; sourceTree = "<group>"; };
+		68F4D5FE62257268709AB2FE /* Pods-Tests-SpriteKitAutoLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-SpriteKitAutoLayout-Private.xcconfig"; path = "../Pods-Tests-SpriteKitAutoLayout/Pods-Tests-SpriteKitAutoLayout-Private.xcconfig"; sourceTree = "<group>"; };
+		6E7842F4ED162A6099E11973 /* Pods-SpriteKitAutoLayoutOSX-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SpriteKitAutoLayoutOSX-dummy.m"; sourceTree = "<group>"; };
+		791C7D490AFF3D187607C9EE /* Pods-Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7C7AEFD8DD3F063F80BD8959 /* Pods-SpriteKitAutoLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpriteKitAutoLayout.release.xcconfig"; sourceTree = "<group>"; };
+		7D0955B7F875323FA9A8F424 /* SKView+SKAL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SKView+SKAL.m"; path = "Pod/Classes/SKView+SKAL.m"; sourceTree = "<group>"; };
+		7D40EBCEE848CF3ADF129892 /* Pods-SpriteKitAutoLayoutOSX-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SpriteKitAutoLayoutOSX-resources.sh"; sourceTree = "<group>"; };
+		7F7D86BFD72EF152D963FBBF /* libPods-SpriteKitAutoLayout-SpriteKitAutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpriteKitAutoLayout-SpriteKitAutoLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AD08AF72363338901A6A6E /* SKNode+SKAL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SKNode+SKAL.m"; path = "Pod/Classes/SKNode+SKAL.m"; sourceTree = "<group>"; };
+		99DCDBA8BEFFC1AC4B4786DC /* libPods-SpriteKitAutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpriteKitAutoLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DB3A58B631A483CC10B0C21 /* Pods-Tests-SpriteKitAutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Tests-SpriteKitAutoLayout-prefix.pch"; path = "../Pods-Tests-SpriteKitAutoLayout/Pods-Tests-SpriteKitAutoLayout-prefix.pch"; sourceTree = "<group>"; };
+		9DE15D6E52E3D2853A18AD87 /* Pods-Tests-SpriteKitAutoLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-SpriteKitAutoLayout.xcconfig"; path = "../Pods-Tests-SpriteKitAutoLayout/Pods-Tests-SpriteKitAutoLayout.xcconfig"; sourceTree = "<group>"; };
+		A55301033A2C7A4E0078BA83 /* Pods-Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-dummy.m"; sourceTree = "<group>"; };
+		A9D7F09348109F0A3021E3F5 /* Pods-SpriteKitAutoLayout-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SpriteKitAutoLayout-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AC53148CFD553D001B368781 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-Private.xcconfig"; path = "../Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout/Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-Private.xcconfig"; sourceTree = "<group>"; };
+		B500849D4DAA310B3269C345 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-prefix.pch"; path = "../Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout/Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-prefix.pch"; sourceTree = "<group>"; };
+		B8D5A07EB4FCD5F1EBC4553C /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-Private.xcconfig"; sourceTree = "<group>"; };
+		BBB383EEF5DFD30A6E766935 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
+		BC0837E9B6AF63D0B0EFCEC2 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C22D4E0EF75A11DEF7F5535B /* SKALUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SKALUtils.m; path = Pod/Classes/SKALUtils.m; sourceTree = "<group>"; };
+		C392CE1590FFDCC870B72344 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C46D3812B8DD3B428E2FE562 /* Pods-Tests-SpriteKitAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Tests-SpriteKitAutoLayout-dummy.m"; path = "../Pods-Tests-SpriteKitAutoLayout/Pods-Tests-SpriteKitAutoLayout-dummy.m"; sourceTree = "<group>"; };
+		C745B0896EF611B771112F0A /* Pods-SpriteKitAutoLayout-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SpriteKitAutoLayout-environment.h"; sourceTree = "<group>"; };
+		C762ECD4D773F316A1900F8F /* SKNode+SKALInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKNode+SKALInternal.h"; path = "Pod/Classes/SKNode+SKALInternal.h"; sourceTree = "<group>"; };
+		CBB8C9792E7C8AF6D22DA2F9 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-dummy.m"; sourceTree = "<group>"; };
+		CEB59F9F54CF8333F8F9F393 /* SKView+SKAL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKView+SKAL.h"; path = "Pod/Classes/SKView+SKAL.h"; sourceTree = "<group>"; };
+		D28E27EE2D3423FE73995AAC /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-prefix.pch"; sourceTree = "<group>"; };
+		DE22FB454B3C1DBCE98DB443 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E87CFE236D8021420ACBE7A5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		F721D391873D53323E0DCDEE /* NSLayoutConstraint+SKAL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+SKAL.m"; path = "Pod/Classes/NSLayoutConstraint+SKAL.m"; sourceTree = "<group>"; };
+		F9325CBC39326E0B7509A8F5 /* Pods-SpriteKitAutoLayout-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SpriteKitAutoLayout-resources.sh"; sourceTree = "<group>"; };
+		FC1DB68D8081FF83B96A3B2F /* Pods-Tests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-environment.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2651B60AF1113336C66CBB12 /* Frameworks */ = {
+		010F7D66E6FD9C2137001A9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F121878ACFF8F6757F40941D /* Foundation.framework in Frameworks */,
-				BED7CA10B9F72362B3B67618 /* SpriteKit.framework in Frameworks */,
+				8C92C360F31573A061F27601 /* Foundation.framework in Frameworks */,
+				38045F90BDEEC0CA547AB55B /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		706BE66ACC50AF83921D8DEA /* Frameworks */ = {
+		472582ED29EF7C0AC9809941 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C05AE340FD151ADC864F9D4 /* Cocoa.framework in Frameworks */,
+				B2BF5B4EE6AA428A0E3BFF8B /* Cocoa.framework in Frameworks */,
+				E8F115F90BD58665E65E6B3F /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB0A2B066DE9DB0C278DA5AB /* Frameworks */ = {
+		7633C5C730C10BF2BECC444A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF649F78CCFCF6725A3CDBD0 /* Cocoa.framework in Frameworks */,
-				889611C3471092BE81BCE6C2 /* SpriteKit.framework in Frameworks */,
+				41776146FDF1D96185A997BF /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD09A933A131F36C21EB7C65 /* Frameworks */ = {
+		D021E9A2A13B1D5CF663DA2C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F75CD1C0CA8C4BF4F8153B76 /* Foundation.framework in Frameworks */,
+				A3A895805742BDFE56221DEA /* Foundation.framework in Frameworks */,
+				202CC23BE7443E46D9A0A771 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EDB3C148B800D5BA1A63DA63 /* Frameworks */ = {
+		DB0888B05D61CEF5171E9663 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A12C3363C862F4F9D5407AF0 /* Foundation.framework in Frameworks */,
+				9E52AB06BF9A333E7D849D18 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6DB189A365CAAC703783A8B /* Frameworks */ = {
+		EC60BD235F207C2835EDD0D1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC9E3DBB7AECA036414F3D7F /* Foundation.framework in Frameworks */,
-				F77F6AF59A46C6ED512087C8 /* SpriteKit.framework in Frameworks */,
+				7753DB3149A2D9E9A2E47030 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A125954E91A8D8428CBDA41 /* iOS */ = {
+		1E0D1FAF496F85A37394A984 = {
 			isa = PBXGroup;
 			children = (
-				FDBE3EFBB9D697E99A970184 /* Foundation.framework */,
-				6636925E6C07B463BFFBB49C /* SpriteKit.framework */,
+				BC0837E9B6AF63D0B0EFCEC2 /* Podfile */,
+				DDCD788EF15EADA2D0EA3EFB /* Development Pods */,
+				A9C79775CD75EAEB2C1E7E33 /* Frameworks */,
+				76066C06C258D5AEABFFFE98 /* Products */,
+				47AAE3D7D06F357991DAF33F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		33444D6761D0ABAE1FA2F998 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C392CE1590FFDCC870B72344 /* Foundation.framework */,
+				559DB52D5AA6586433747944 /* SpriteKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		379D20F8703BE25B445CD754 = {
+		3B4C5D3A5D1923C454B70FE3 /* Pods-Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E48B14696131046A35F8BC97 /* Podfile */,
-				F95B814E08F0309132195DAB /* Development Pods */,
-				69B3C3DEE6823F14DFA1C2CE /* Frameworks */,
-				88E8069454EA50FE86B76F0A /* Products */,
-				DC5902AB86DE7C2FD0DFDAED /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		5B4648804504592F38CB0BDF /* SpriteKitAutoLayout */ = {
-			isa = PBXGroup;
-			children = (
-				78BC6DD91917466A929EC8C5 /* NSLayoutConstraint+SKAL.h */,
-				50EDFA27279EE1CA25AAF0A0 /* NSLayoutConstraint+SKAL.m */,
-				76A24E7C5135B460E7DF66B5 /* SKALPlatformView+SKALInternal.h */,
-				8B61AD0FED82867AE6EA4993 /* SKALPlatformView+SKALInternal.m */,
-				708F5D2D9D1CC121FA2E30FC /* SKALUtils.h */,
-				CCA35B9833061FB56443FA0D /* SKALUtils.m */,
-				AF5EC1411151C8619356B4BC /* SKNode+SKAL.h */,
-				7D1D976A05F82D158CECCA61 /* SKNode+SKAL.m */,
-				55CAE45380A27244CE1699F2 /* SKNode+SKALInternal.h */,
-				4A5233C40FF4AA46B90248A3 /* SKNode+SKALInternal.m */,
-				FAB99F34B2D55F153B5C85C1 /* SKView+SKAL.h */,
-				E0A2841837DF013AD49EF39B /* SKView+SKAL.m */,
-				2B61FC49E1D3A84910E266A9 /* SpriteKitAutoLayout.h */,
-				B5B240B6B837BC41E720B6C5 /* Support Files */,
-			);
-			name = SpriteKitAutoLayout;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		64049335074EEA173ABB9305 /* OS X */ = {
-			isa = PBXGroup;
-			children = (
-				829335D61C275E3782B02C48 /* Cocoa.framework */,
-				7DDCC44D258F1ABD301049EC /* SpriteKit.framework */,
-			);
-			name = "OS X";
-			sourceTree = "<group>";
-		};
-		69B3C3DEE6823F14DFA1C2CE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				64049335074EEA173ABB9305 /* OS X */,
-				1A125954E91A8D8428CBDA41 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		88E8069454EA50FE86B76F0A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1CBEFD83EBADEE1A4C688D5E /* libPods-SpriteKitAutoLayout.a */,
-				016B9C280C2FD7F4207B211F /* libPods-SpriteKitAutoLayout-SpriteKitAutoLayout.a */,
-				549351DDD9B696C2F14A6396 /* libPods-SpriteKitAutoLayoutOSX.a */,
-				382806663A0C8B3A096E33E6 /* libPods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.a */,
-				07315A608A43B4605B8F34D5 /* libPods-Tests.a */,
-				9768589AFEF9B6CBFEBE8BC6 /* libPods-Tests-SpriteKitAutoLayout.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		98A40DD448D70FF468AA6CC3 /* Pods-SpriteKitAutoLayout */ = {
-			isa = PBXGroup;
-			children = (
-				E901B2E7BB1D24DA7FF9B6EC /* Pods-SpriteKitAutoLayout-acknowledgements.markdown */,
-				DEF5FD52E2419C401FE668FA /* Pods-SpriteKitAutoLayout-acknowledgements.plist */,
-				3B0E400FA7A380A0EA6C3125 /* Pods-SpriteKitAutoLayout-dummy.m */,
-				7E35805098B2FF583555FA37 /* Pods-SpriteKitAutoLayout-environment.h */,
-				0A0B91C110032E5CB18D76F7 /* Pods-SpriteKitAutoLayout-resources.sh */,
-				DD12B0E6BB8AEEABD9253982 /* Pods-SpriteKitAutoLayout.debug.xcconfig */,
-				AA288E5AA79672E79AC168F3 /* Pods-SpriteKitAutoLayout.release.xcconfig */,
-			);
-			name = "Pods-SpriteKitAutoLayout";
-			path = "Target Support Files/Pods-SpriteKitAutoLayout";
-			sourceTree = "<group>";
-		};
-		9EB1DC8CBED79397B48FD891 /* Pods-SpriteKitAutoLayoutOSX */ = {
-			isa = PBXGroup;
-			children = (
-				0687846D0EC3528A695E7323 /* Pods-SpriteKitAutoLayoutOSX-acknowledgements.markdown */,
-				6A5191F8099642A9D89FA16D /* Pods-SpriteKitAutoLayoutOSX-acknowledgements.plist */,
-				2155A1B19481F1056E2C2A07 /* Pods-SpriteKitAutoLayoutOSX-dummy.m */,
-				3655A61357923368DD3D9BAC /* Pods-SpriteKitAutoLayoutOSX-environment.h */,
-				CF551C166B6FE7E8B819B6AC /* Pods-SpriteKitAutoLayoutOSX-resources.sh */,
-				2DB8DE2293E4DA966D93919B /* Pods-SpriteKitAutoLayoutOSX.debug.xcconfig */,
-				5A6DB2CDE84808C5C917A608 /* Pods-SpriteKitAutoLayoutOSX.release.xcconfig */,
-			);
-			name = "Pods-SpriteKitAutoLayoutOSX";
-			path = "Target Support Files/Pods-SpriteKitAutoLayoutOSX";
-			sourceTree = "<group>";
-		};
-		B5B240B6B837BC41E720B6C5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1088C07DE0C6B9B0DFE071FA /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout.xcconfig */,
-				BB72800AD7F88295E7EEFB96 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-Private.xcconfig */,
-				BAEFF2E126D7CEE9F8CF5410 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-dummy.m */,
-				636F648964885AC723CA40D1 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-prefix.pch */,
-				CA2240D2C0FDEE6F5B12DD75 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.xcconfig */,
-				B09A769AA5B60B61D97A94C2 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-Private.xcconfig */,
-				4E32FCB66E2A02E8C259569C /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-dummy.m */,
-				DE142DF931F5870A638C36C3 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-prefix.pch */,
-				5D3B2823B18EB59A17340960 /* Pods-Tests-SpriteKitAutoLayout.xcconfig */,
-				B614C586286C25424DED757D /* Pods-Tests-SpriteKitAutoLayout-Private.xcconfig */,
-				B2D6394DFDE22CEEC4F8094A /* Pods-Tests-SpriteKitAutoLayout-dummy.m */,
-				434D96599448E4D7513E8354 /* Pods-Tests-SpriteKitAutoLayout-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Pods-SpriteKitAutoLayout-SpriteKitAutoLayout";
-			sourceTree = "<group>";
-		};
-		CABE999B566169D0ED26544E /* Pods-Tests */ = {
-			isa = PBXGroup;
-			children = (
-				5A178315E0F4E06636255228 /* Pods-Tests-acknowledgements.markdown */,
-				214148AD4B91A97096CE4222 /* Pods-Tests-acknowledgements.plist */,
-				B259144BC64A1BDCA8346C06 /* Pods-Tests-dummy.m */,
-				8D260B2808E3A262804B28E4 /* Pods-Tests-environment.h */,
-				210596BA408343E7736ADDEC /* Pods-Tests-resources.sh */,
-				FFBBE3B5F912F3E69D7C4F58 /* Pods-Tests.debug.xcconfig */,
-				05AC32DCEC85459D1538ED30 /* Pods-Tests.release.xcconfig */,
+				791C7D490AFF3D187607C9EE /* Pods-Tests-acknowledgements.markdown */,
+				0D2607A43588DADE850DB35C /* Pods-Tests-acknowledgements.plist */,
+				A55301033A2C7A4E0078BA83 /* Pods-Tests-dummy.m */,
+				FC1DB68D8081FF83B96A3B2F /* Pods-Tests-environment.h */,
+				6840BECBD9FDF8BF496D0FF9 /* Pods-Tests-resources.sh */,
+				529D9D9D50BA491870807C61 /* Pods-Tests.debug.xcconfig */,
+				DE22FB454B3C1DBCE98DB443 /* Pods-Tests.release.xcconfig */,
 			);
 			name = "Pods-Tests";
 			path = "Target Support Files/Pods-Tests";
 			sourceTree = "<group>";
 		};
-		DC5902AB86DE7C2FD0DFDAED /* Targets Support Files */ = {
+		47AAE3D7D06F357991DAF33F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				98A40DD448D70FF468AA6CC3 /* Pods-SpriteKitAutoLayout */,
-				9EB1DC8CBED79397B48FD891 /* Pods-SpriteKitAutoLayoutOSX */,
-				CABE999B566169D0ED26544E /* Pods-Tests */,
+				ECA2CAC624F40FCBDBB78772 /* Pods-SpriteKitAutoLayout */,
+				8845EBCEF302BC156B538176 /* Pods-SpriteKitAutoLayoutOSX */,
+				3B4C5D3A5D1923C454B70FE3 /* Pods-Tests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F95B814E08F0309132195DAB /* Development Pods */ = {
+		76066C06C258D5AEABFFFE98 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B4648804504592F38CB0BDF /* SpriteKitAutoLayout */,
+				99DCDBA8BEFFC1AC4B4786DC /* libPods-SpriteKitAutoLayout.a */,
+				7F7D86BFD72EF152D963FBBF /* libPods-SpriteKitAutoLayout-SpriteKitAutoLayout.a */,
+				41710B6A5F66B58572693358 /* libPods-SpriteKitAutoLayoutOSX.a */,
+				0E8FA07EF3E146D985E55323 /* libPods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.a */,
+				0CAB302B75D8AC0E7C7994A0 /* libPods-Tests.a */,
+				0B47E612711C255F604F665C /* libPods-Tests-SpriteKitAutoLayout.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8845EBCEF302BC156B538176 /* Pods-SpriteKitAutoLayoutOSX */ = {
+			isa = PBXGroup;
+			children = (
+				3ECF611913CBDE70ED64E6BC /* Pods-SpriteKitAutoLayoutOSX-acknowledgements.markdown */,
+				45D092C7A1562701B8EE4215 /* Pods-SpriteKitAutoLayoutOSX-acknowledgements.plist */,
+				6E7842F4ED162A6099E11973 /* Pods-SpriteKitAutoLayoutOSX-dummy.m */,
+				2D5C3D412DBC32C59885010E /* Pods-SpriteKitAutoLayoutOSX-environment.h */,
+				7D40EBCEE848CF3ADF129892 /* Pods-SpriteKitAutoLayoutOSX-resources.sh */,
+				4606A96DACEC064F6DD87E75 /* Pods-SpriteKitAutoLayoutOSX.debug.xcconfig */,
+				59E0BDCA408E975184E73B97 /* Pods-SpriteKitAutoLayoutOSX.release.xcconfig */,
+			);
+			name = "Pods-SpriteKitAutoLayoutOSX";
+			path = "Target Support Files/Pods-SpriteKitAutoLayoutOSX";
+			sourceTree = "<group>";
+		};
+		9F8A8B94D0E96E6E2E398CCD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DF27DCB43DB68AFBB35A5CD /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout.xcconfig */,
+				B8D5A07EB4FCD5F1EBC4553C /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-Private.xcconfig */,
+				CBB8C9792E7C8AF6D22DA2F9 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-dummy.m */,
+				D28E27EE2D3423FE73995AAC /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-prefix.pch */,
+				4230E039A309E865FCCF23EE /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.xcconfig */,
+				AC53148CFD553D001B368781 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-Private.xcconfig */,
+				6742EBB413CAE51101804FF2 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-dummy.m */,
+				B500849D4DAA310B3269C345 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-prefix.pch */,
+				9DE15D6E52E3D2853A18AD87 /* Pods-Tests-SpriteKitAutoLayout.xcconfig */,
+				68F4D5FE62257268709AB2FE /* Pods-Tests-SpriteKitAutoLayout-Private.xcconfig */,
+				C46D3812B8DD3B428E2FE562 /* Pods-Tests-SpriteKitAutoLayout-dummy.m */,
+				9DB3A58B631A483CC10B0C21 /* Pods-Tests-SpriteKitAutoLayout-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Pods-SpriteKitAutoLayout-SpriteKitAutoLayout";
+			sourceTree = "<group>";
+		};
+		A9C79775CD75EAEB2C1E7E33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEFE80D34957EA2CF05607A6 /* OS X */,
+				33444D6761D0ABAE1FA2F998 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDCD788EF15EADA2D0EA3EFB /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F924B5F60280E0C6DEAEC0F9 /* SpriteKitAutoLayout */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		ECA2CAC624F40FCBDBB78772 /* Pods-SpriteKitAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				A9D7F09348109F0A3021E3F5 /* Pods-SpriteKitAutoLayout-acknowledgements.markdown */,
+				4909F4245FAA40BC0C81E1F8 /* Pods-SpriteKitAutoLayout-acknowledgements.plist */,
+				26C7518C138AD71A82AB2CEA /* Pods-SpriteKitAutoLayout-dummy.m */,
+				C745B0896EF611B771112F0A /* Pods-SpriteKitAutoLayout-environment.h */,
+				F9325CBC39326E0B7509A8F5 /* Pods-SpriteKitAutoLayout-resources.sh */,
+				02F68266EBADED092CE007AB /* Pods-SpriteKitAutoLayout.debug.xcconfig */,
+				7C7AEFD8DD3F063F80BD8959 /* Pods-SpriteKitAutoLayout.release.xcconfig */,
+			);
+			name = "Pods-SpriteKitAutoLayout";
+			path = "Target Support Files/Pods-SpriteKitAutoLayout";
+			sourceTree = "<group>";
+		};
+		F924B5F60280E0C6DEAEC0F9 /* SpriteKitAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				470C7F9D101883EBC46580C5 /* NSLayoutConstraint+SKAL.h */,
+				F721D391873D53323E0DCDEE /* NSLayoutConstraint+SKAL.m */,
+				38750644B031381DC7F31649 /* SKALPlatformView+SKALInternal.h */,
+				2BE125F6A889D0D41E6A4B9B /* SKALPlatformView+SKALInternal.m */,
+				46E8C8E48C0CB5C167A7D6AE /* SKALUtils.h */,
+				C22D4E0EF75A11DEF7F5535B /* SKALUtils.m */,
+				2F7A9A97CF565CA04CD4C424 /* SKNode+SKAL.h */,
+				81AD08AF72363338901A6A6E /* SKNode+SKAL.m */,
+				C762ECD4D773F316A1900F8F /* SKNode+SKALInternal.h */,
+				097B4F355E5A8D72C44B2223 /* SKNode+SKALInternal.m */,
+				CEB59F9F54CF8333F8F9F393 /* SKView+SKAL.h */,
+				7D0955B7F875323FA9A8F424 /* SKView+SKAL.m */,
+				144C195D886BE518D3808D08 /* SpriteKitAutoLayout.h */,
+				9F8A8B94D0E96E6E2E398CCD /* Support Files */,
+			);
+			name = SpriteKitAutoLayout;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		FEFE80D34957EA2CF05607A6 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				E87CFE236D8021420ACBE7A5 /* Cocoa.framework */,
+				BBB383EEF5DFD30A6E766935 /* SpriteKit.framework */,
+			);
+			name = "OS X";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		23D653011068E296004F466F /* Headers */ = {
+		1F9D675A264E18EC19406DC7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D32F298D0156C31AA8396E4D /* NSLayoutConstraint+SKAL.h in Headers */,
-				21C272B8F2226A0A9345E2DC /* SKALPlatformView+SKALInternal.h in Headers */,
-				ACC78359EBF6A434434DAA76 /* SKALUtils.h in Headers */,
-				91F4FEC319E1BE4D2665BB7C /* SKNode+SKAL.h in Headers */,
-				769A95BE9FC3420E37D8BE6E /* SKNode+SKALInternal.h in Headers */,
-				419590E78A2FABF087F55324 /* SKView+SKAL.h in Headers */,
-				38A3FF671033A51C0A5B339C /* SpriteKitAutoLayout.h in Headers */,
+				70FCFD2288B17C46F630A7CA /* NSLayoutConstraint+SKAL.h in Headers */,
+				96185B349519ED39A2482CD7 /* SKALPlatformView+SKALInternal.h in Headers */,
+				F25B81C1AE0E84B34CBBB9D1 /* SKALUtils.h in Headers */,
+				7C4165D1AB60F5AEDD876B08 /* SKNode+SKAL.h in Headers */,
+				1737FD2EBBA746AEB15BECC3 /* SKNode+SKALInternal.h in Headers */,
+				919F28B69233ED0E8B24F3D7 /* SKView+SKAL.h in Headers */,
+				F1316EE450585E8895CBC203 /* SpriteKitAutoLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B814608494EE296156A87AC6 /* Headers */ = {
+		431F56A256407903F5746F95 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06DFDBE9E0FE1B1AB5F004FD /* NSLayoutConstraint+SKAL.h in Headers */,
-				B4E7D470C68DF62428C41BDA /* SKALPlatformView+SKALInternal.h in Headers */,
-				DCC85DF57095AD552A8FB376 /* SKALUtils.h in Headers */,
-				D3D5B2054CED30C5D9CE68A7 /* SKNode+SKAL.h in Headers */,
-				9AF85BBBEFAA85909EA07EE8 /* SKNode+SKALInternal.h in Headers */,
-				EC08DAAD4042E352EBFD1C40 /* SKView+SKAL.h in Headers */,
-				375024B498030943F0507926 /* SpriteKitAutoLayout.h in Headers */,
+				C02DF4B6BECE8F756F865010 /* NSLayoutConstraint+SKAL.h in Headers */,
+				B799719CB04F075293086745 /* SKALPlatformView+SKALInternal.h in Headers */,
+				3BC7EFFE807A24C1B14957C1 /* SKALUtils.h in Headers */,
+				D0A39C6687F4EB735ECA9382 /* SKNode+SKAL.h in Headers */,
+				7947667E644F0F06B9A884C6 /* SKNode+SKALInternal.h in Headers */,
+				34E9719B5B2891D21F63FD5C /* SKView+SKAL.h in Headers */,
+				0A30D87764A350321164E3FD /* SpriteKitAutoLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D86AABF88BD8FD05393FBCE4 /* Headers */ = {
+		7DDDEBC2AE070377F93703C1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C67F19C9041AA595B1ECF94 /* NSLayoutConstraint+SKAL.h in Headers */,
-				E2939DCE00250C3079A96B07 /* SKALPlatformView+SKALInternal.h in Headers */,
-				5AAF99EAF11587C55114EE94 /* SKALUtils.h in Headers */,
-				4B552A985BCD39CC91686866 /* SKNode+SKAL.h in Headers */,
-				09B5E17FC40EBDFD53B86B17 /* SKNode+SKALInternal.h in Headers */,
-				AA7852F8AB4D0C9D87A612B9 /* SKView+SKAL.h in Headers */,
-				96AC9D6383F8184F07A1D7E4 /* SpriteKitAutoLayout.h in Headers */,
+				E754735D44F392B5CBEFE438 /* NSLayoutConstraint+SKAL.h in Headers */,
+				85C8649CB65522CB265AE4AC /* SKALPlatformView+SKALInternal.h in Headers */,
+				92B3A48A7339CF5BF3BB7404 /* SKALUtils.h in Headers */,
+				7DF05A2CB41A93E33B5A1645 /* SKNode+SKAL.h in Headers */,
+				D1687FE817A86D3FC66059F0 /* SKNode+SKALInternal.h in Headers */,
+				F6F169000998EF6C5B3FD4BF /* SKView+SKAL.h in Headers */,
+				572D84E7A463B3D667D73130 /* SpriteKitAutoLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		189B814798C6F1BD8BD385BC /* Pods-SpriteKitAutoLayoutOSX */ = {
+		0829BEB52DD8D805D9397A5B /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4A5E12D6688C9887BE3D6E2 /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayoutOSX" */;
+			buildConfigurationList = C46710592882D03021467AAB /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout" */;
 			buildPhases = (
-				41BD7150483EAD682CF618F1 /* Sources */,
-				706BE66ACC50AF83921D8DEA /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E51763AF71256591E49C41D5 /* PBXTargetDependency */,
-			);
-			name = "Pods-SpriteKitAutoLayoutOSX";
-			productName = "Pods-SpriteKitAutoLayoutOSX";
-			productReference = 549351DDD9B696C2F14A6396 /* libPods-SpriteKitAutoLayoutOSX.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		3BC4647BE1C311CB517A33DC /* Pods-SpriteKitAutoLayout */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BCB73B1F54497A0D6EDE64BB /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayout" */;
-			buildPhases = (
-				5861976E27BA08F0B8CF990B /* Sources */,
-				EDB3C148B800D5BA1A63DA63 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3476A8AABC5BA05C968D86C3 /* PBXTargetDependency */,
-			);
-			name = "Pods-SpriteKitAutoLayout";
-			productName = "Pods-SpriteKitAutoLayout";
-			productReference = 1CBEFD83EBADEE1A4C688D5E /* libPods-SpriteKitAutoLayout.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		78AE48DA3FF040C4B998911B /* Pods-Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 16A582E09124CEFEABF506D7 /* Build configuration list for PBXNativeTarget "Pods-Tests" */;
-			buildPhases = (
-				D52533EB51E6924DD0DC47CA /* Sources */,
-				CD09A933A131F36C21EB7C65 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EA949DE8E18DCA4E4C0A7002 /* PBXTargetDependency */,
-			);
-			name = "Pods-Tests";
-			productName = "Pods-Tests";
-			productReference = 07315A608A43B4605B8F34D5 /* libPods-Tests.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		811D7B5D74BD3C429E928927 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 35DB480617F982CD48341B29 /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout" */;
-			buildPhases = (
-				6B3B1C1756D4CEF987424F60 /* Sources */,
-				F6DB189A365CAAC703783A8B /* Frameworks */,
-				23D653011068E296004F466F /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout";
-			productName = "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout";
-			productReference = 016B9C280C2FD7F4207B211F /* libPods-SpriteKitAutoLayout-SpriteKitAutoLayout.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		C6870AABACDC35B806FEDA65 /* Pods-Tests-SpriteKitAutoLayout */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A9AD14CA8817ABBEC2264DAE /* Build configuration list for PBXNativeTarget "Pods-Tests-SpriteKitAutoLayout" */;
-			buildPhases = (
-				56650063E8F7234C7AD47AE6 /* Sources */,
-				2651B60AF1113336C66CBB12 /* Frameworks */,
-				B814608494EE296156A87AC6 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-Tests-SpriteKitAutoLayout";
-			productName = "Pods-Tests-SpriteKitAutoLayout";
-			productReference = 9768589AFEF9B6CBFEBE8BC6 /* libPods-Tests-SpriteKitAutoLayout.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		E2788EBC176448E5A132C8B0 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 454A9B11C6A9E9ED121B4B27 /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout" */;
-			buildPhases = (
-				311804624D34BCCA7F7B9BF1 /* Sources */,
-				CB0A2B066DE9DB0C278DA5AB /* Frameworks */,
-				D86AABF88BD8FD05393FBCE4 /* Headers */,
+				1BCEAA5D6600165D13838FC5 /* Sources */,
+				472582ED29EF7C0AC9809941 /* Frameworks */,
+				7DDDEBC2AE070377F93703C1 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -505,133 +420,277 @@
 			);
 			name = "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout";
 			productName = "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout";
-			productReference = 382806663A0C8B3A096E33E6 /* libPods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.a */;
+			productReference = 0E8FA07EF3E146D985E55323 /* libPods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3F8B3427741E2B349C7F5207 /* Pods-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD9BB2FAC9F8F4E965AFA9C2 /* Build configuration list for PBXNativeTarget "Pods-Tests" */;
+			buildPhases = (
+				FB53B7CC549880A5CDBAFAB0 /* Sources */,
+				EC60BD235F207C2835EDD0D1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7900F083F67298F387056AA8 /* PBXTargetDependency */,
+			);
+			name = "Pods-Tests";
+			productName = "Pods-Tests";
+			productReference = 0CAB302B75D8AC0E7C7994A0 /* libPods-Tests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		65B99BD7CA5E4886A4D263F8 /* Pods-SpriteKitAutoLayoutOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F3E1F4535BDC34EFF9BAF0C /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayoutOSX" */;
+			buildPhases = (
+				0D795D18A72AF5A4738FB498 /* Sources */,
+				7633C5C730C10BF2BECC444A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				154B4DA1CE852BC94856C45C /* PBXTargetDependency */,
+			);
+			name = "Pods-SpriteKitAutoLayoutOSX";
+			productName = "Pods-SpriteKitAutoLayoutOSX";
+			productReference = 41710B6A5F66B58572693358 /* libPods-SpriteKitAutoLayoutOSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B2B747ABC15BF4BB8B4419D4 /* Pods-Tests-SpriteKitAutoLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 371824C4322AE91BC840A5C7 /* Build configuration list for PBXNativeTarget "Pods-Tests-SpriteKitAutoLayout" */;
+			buildPhases = (
+				07B203443B2A23F435F688F0 /* Sources */,
+				D021E9A2A13B1D5CF663DA2C /* Frameworks */,
+				431F56A256407903F5746F95 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Tests-SpriteKitAutoLayout";
+			productName = "Pods-Tests-SpriteKitAutoLayout";
+			productReference = 0B47E612711C255F604F665C /* libPods-Tests-SpriteKitAutoLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EB6CBC889FB4FB67023AAF51 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC683EAC702ACAFF4250B571 /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout" */;
+			buildPhases = (
+				9EE0DBF2A5E7F28BA5195FE4 /* Sources */,
+				010F7D66E6FD9C2137001A9A /* Frameworks */,
+				1F9D675A264E18EC19406DC7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout";
+			productName = "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout";
+			productReference = 7F7D86BFD72EF152D963FBBF /* libPods-SpriteKitAutoLayout-SpriteKitAutoLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FCD54BFDEB9EFAEC273A7D87 /* Pods-SpriteKitAutoLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBBE8BAC6E2E4B68514B9354 /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayout" */;
+			buildPhases = (
+				31FDCEA345C57E11A21F5FBD /* Sources */,
+				DB0888B05D61CEF5171E9663 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5632CCF59D09F5BD51C5C953 /* PBXTargetDependency */,
+			);
+			name = "Pods-SpriteKitAutoLayout";
+			productName = "Pods-SpriteKitAutoLayout";
+			productReference = 99DCDBA8BEFFC1AC4B4786DC /* libPods-SpriteKitAutoLayout.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2D18FF17984F8A60DF994E5F /* Project object */ = {
+		9FED8176AD28BA132BB15853 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = C88F7657707B763FBCC2EA8C /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = E66FE44099FDD9666E0C45D1 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 379D20F8703BE25B445CD754;
-			productRefGroup = 88E8069454EA50FE86B76F0A /* Products */;
+			mainGroup = 1E0D1FAF496F85A37394A984;
+			productRefGroup = 76066C06C258D5AEABFFFE98 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3BC4647BE1C311CB517A33DC /* Pods-SpriteKitAutoLayout */,
-				811D7B5D74BD3C429E928927 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout */,
-				189B814798C6F1BD8BD385BC /* Pods-SpriteKitAutoLayoutOSX */,
-				E2788EBC176448E5A132C8B0 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout */,
-				78AE48DA3FF040C4B998911B /* Pods-Tests */,
-				C6870AABACDC35B806FEDA65 /* Pods-Tests-SpriteKitAutoLayout */,
+				FCD54BFDEB9EFAEC273A7D87 /* Pods-SpriteKitAutoLayout */,
+				EB6CBC889FB4FB67023AAF51 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout */,
+				65B99BD7CA5E4886A4D263F8 /* Pods-SpriteKitAutoLayoutOSX */,
+				0829BEB52DD8D805D9397A5B /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout */,
+				3F8B3427741E2B349C7F5207 /* Pods-Tests */,
+				B2B747ABC15BF4BB8B4419D4 /* Pods-Tests-SpriteKitAutoLayout */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		311804624D34BCCA7F7B9BF1 /* Sources */ = {
+		07B203443B2A23F435F688F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F04C32DE2B4739C8B4277935 /* NSLayoutConstraint+SKAL.m in Sources */,
-				6531EAADEFD63519022BE7EC /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-dummy.m in Sources */,
-				6CAC8647013D16123189752C /* SKALPlatformView+SKALInternal.m in Sources */,
-				17DC7601AD7C281AA055578E /* SKALUtils.m in Sources */,
-				49B8EFC5D3372C4948F58B4C /* SKNode+SKAL.m in Sources */,
-				39A00A7AF3525D02E0F4B3E0 /* SKNode+SKALInternal.m in Sources */,
-				3241DAD69A629276A9E1CA81 /* SKView+SKAL.m in Sources */,
+				381894B0C447081D34C4358E /* NSLayoutConstraint+SKAL.m in Sources */,
+				3EF5DF39A9F6E018382093C9 /* Pods-Tests-SpriteKitAutoLayout-dummy.m in Sources */,
+				5F242D5CF6914FFEB5D6E9F9 /* SKALPlatformView+SKALInternal.m in Sources */,
+				FD5CCC1B13424CD0CA6D5B08 /* SKALUtils.m in Sources */,
+				E5396B88866B62D147C87071 /* SKNode+SKAL.m in Sources */,
+				51788338F8EDEEFAA991C17C /* SKNode+SKALInternal.m in Sources */,
+				80A51FDF80A7C299B15402FC /* SKView+SKAL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		41BD7150483EAD682CF618F1 /* Sources */ = {
+		0D795D18A72AF5A4738FB498 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FF0E4C3EB34B107B40E33A4 /* Pods-SpriteKitAutoLayoutOSX-dummy.m in Sources */,
+				D21861CE06508A47004DA0AC /* Pods-SpriteKitAutoLayoutOSX-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56650063E8F7234C7AD47AE6 /* Sources */ = {
+		1BCEAA5D6600165D13838FC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8594AB11A09F94A5066372B /* NSLayoutConstraint+SKAL.m in Sources */,
-				FBA4ED0CAD3670ABBE8FE5F7 /* Pods-Tests-SpriteKitAutoLayout-dummy.m in Sources */,
-				D1A8C4C3D132F6005C27B0A6 /* SKALPlatformView+SKALInternal.m in Sources */,
-				7AEB2B12E53A8CEFC0917CA7 /* SKALUtils.m in Sources */,
-				57BD5263A6D8D2AC70E6E2BC /* SKNode+SKAL.m in Sources */,
-				E2FB7A66FEEB751C372F6C80 /* SKNode+SKALInternal.m in Sources */,
-				7A75057DBE180F9E1D7D90FD /* SKView+SKAL.m in Sources */,
+				760147622BEA01BD36AED855 /* NSLayoutConstraint+SKAL.m in Sources */,
+				A3E6D5877DA308CE86F0A182 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-dummy.m in Sources */,
+				C28787A0E4EC87FFF4B8DD52 /* SKALPlatformView+SKALInternal.m in Sources */,
+				393D05F2F80B178CE9D40994 /* SKALUtils.m in Sources */,
+				95DF5AAAD6E4B54119BAFE36 /* SKNode+SKAL.m in Sources */,
+				DEFA36402A66E35AB93A6AA5 /* SKNode+SKALInternal.m in Sources */,
+				FC1174B7672FA27D587ECD1B /* SKView+SKAL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5861976E27BA08F0B8CF990B /* Sources */ = {
+		31FDCEA345C57E11A21F5FBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A7C61C7B4D793884DEB285A /* Pods-SpriteKitAutoLayout-dummy.m in Sources */,
+				970D47A7AB280EB15F2F0FE3 /* Pods-SpriteKitAutoLayout-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B3B1C1756D4CEF987424F60 /* Sources */ = {
+		9EE0DBF2A5E7F28BA5195FE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C52C41B387A8187E96CC0C1 /* NSLayoutConstraint+SKAL.m in Sources */,
-				F08E5B81AF82968004B4AC63 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-dummy.m in Sources */,
-				1BADB6571F5D31D58F45DB04 /* SKALPlatformView+SKALInternal.m in Sources */,
-				5B3018DD5A1CB9177C869FB6 /* SKALUtils.m in Sources */,
-				880FDFC12E5C03F8A73AE11A /* SKNode+SKAL.m in Sources */,
-				02B5B61018982BA0E2F3195E /* SKNode+SKALInternal.m in Sources */,
-				CBF4BCC32E38399EE8BE053F /* SKView+SKAL.m in Sources */,
+				9793CAB629103EB7CAE880D1 /* NSLayoutConstraint+SKAL.m in Sources */,
+				8E77000AFE84A4199996341B /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-dummy.m in Sources */,
+				51ED8EF90D365B9B041E92C2 /* SKALPlatformView+SKALInternal.m in Sources */,
+				9886A5EC9A8A02FA7317854D /* SKALUtils.m in Sources */,
+				DF38C94FE2B3DEF4785667BF /* SKNode+SKAL.m in Sources */,
+				0D08ECF3FF5F489AE4F5BA53 /* SKNode+SKALInternal.m in Sources */,
+				0BAAF5E9761C8F3826D930AB /* SKView+SKAL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D52533EB51E6924DD0DC47CA /* Sources */ = {
+		FB53B7CC549880A5CDBAFAB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				281755E6E4537869B8C3F075 /* Pods-Tests-dummy.m in Sources */,
+				4B535B4EF8EC52CF3D3ECBE0 /* Pods-Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3476A8AABC5BA05C968D86C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout";
-			target = 811D7B5D74BD3C429E928927 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout */;
-			targetProxy = 225F48F4E2DA408CC683158A /* PBXContainerItemProxy */;
-		};
-		E51763AF71256591E49C41D5 /* PBXTargetDependency */ = {
+		154B4DA1CE852BC94856C45C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout";
-			target = E2788EBC176448E5A132C8B0 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout */;
-			targetProxy = C97BB9F302E2F8C5EA376B8B /* PBXContainerItemProxy */;
+			target = 0829BEB52DD8D805D9397A5B /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout */;
+			targetProxy = 63ABEFA0F9BCA3CDCB39A4F6 /* PBXContainerItemProxy */;
 		};
-		EA949DE8E18DCA4E4C0A7002 /* PBXTargetDependency */ = {
+		5632CCF59D09F5BD51C5C953 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout";
+			target = EB6CBC889FB4FB67023AAF51 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout */;
+			targetProxy = 420C35712F9244447ED63860 /* PBXContainerItemProxy */;
+		};
+		7900F083F67298F387056AA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Tests-SpriteKitAutoLayout";
-			target = C6870AABACDC35B806FEDA65 /* Pods-Tests-SpriteKitAutoLayout */;
-			targetProxy = 1B9A9C54C2EFF26B165A299E /* PBXContainerItemProxy */;
+			target = B2B747ABC15BF4BB8B4419D4 /* Pods-Tests-SpriteKitAutoLayout */;
+			targetProxy = E1F22387ED8AF339EC7A3821 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1BE031BBA4A604E484CB08C1 /* Debug */ = {
+		21B3707EB6C95C69627C4CE2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFBBE3B5F912F3E69D7C4F58 /* Pods-Tests.debug.xcconfig */;
+			baseConfigurationReference = 59E0BDCA408E975184E73B97 /* Pods-SpriteKitAutoLayoutOSX.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		41D47FB924A07C23C463BEF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8D5A07EB4FCD5F1EBC4553C /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SpriteKitAutoLayout-SpriteKitAutoLayout/Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5311938EA6F7C464FEFC1FD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8D5A07EB4FCD5F1EBC4553C /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
@@ -639,6 +698,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SpriteKitAutoLayout-SpriteKitAutoLayout/Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -655,7 +715,35 @@
 			};
 			name = Debug;
 		};
-		318935A0282E506EE3CC2EBA /* Release */ = {
+		5DA3575DC1B87ACAF14372CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C7AEFD8DD3F063F80BD8959 /* Pods-SpriteKitAutoLayout.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6AF76325C012F30660B149A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -687,9 +775,9 @@
 			};
 			name = Release;
 		};
-		35C7AA1402EA96A98B5BFC5B /* Debug */ = {
+		707B5493F1B8111BFBE683DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B614C586286C25424DED757D /* Pods-Tests-SpriteKitAutoLayout-Private.xcconfig */;
+			baseConfigurationReference = 68F4D5FE62257268709AB2FE /* Pods-Tests-SpriteKitAutoLayout-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
@@ -714,9 +802,9 @@
 			};
 			name = Debug;
 		};
-		4D2319DD4C4C298E0E3D948B /* Release */ = {
+		81D082D358370030F1D77BC8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05AC32DCEC85459D1538ED30 /* Pods-Tests.release.xcconfig */;
+			baseConfigurationReference = DE22FB454B3C1DBCE98DB443 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
@@ -742,179 +830,7 @@
 			};
 			name = Release;
 		};
-		50D1218963FFDD2C1BF0F3A9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB72800AD7F88295E7EEFB96 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-SpriteKitAutoLayout-SpriteKitAutoLayout/Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-prefix.pch";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		63EFAB0EC81ADEB3A318BFA8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD12B0E6BB8AEEABD9253982 /* Pods-SpriteKitAutoLayout.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		890F02A045B9E757DA99762F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B09A769AA5B60B61D97A94C2 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout/Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		95EB0587E8C67ACE99A106FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B614C586286C25424DED757D /* Pods-Tests-SpriteKitAutoLayout-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-SpriteKitAutoLayout/Pods-Tests-SpriteKitAutoLayout-prefix.pch";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		98C8920ED5BBCAB70BD252C9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB72800AD7F88295E7EEFB96 /* Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-SpriteKitAutoLayout-SpriteKitAutoLayout/Pods-SpriteKitAutoLayout-SpriteKitAutoLayout-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		A358274046B48846E6B26D28 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A6DB2CDE84808C5C917A608 /* Pods-SpriteKitAutoLayoutOSX.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		AD7B51629B23C79FCFE00A27 /* Debug */ = {
+		9590B852545E3BAC09A0D82E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -951,37 +867,35 @@
 			};
 			name = Debug;
 		};
-		B4063D20CB2B6F614F4D7682 /* Release */ = {
+		9ED775E2E8CD9975D3A5BADF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA288E5AA79672E79AC168F3 /* Pods-SpriteKitAutoLayout.release.xcconfig */;
+			baseConfigurationReference = 02F68266EBADED092CE007AB /* Pods-SpriteKitAutoLayout.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		C48624DA4C0D6E840499C9F5 /* Debug */ = {
+		B00D0B78FA8D2689C54B93DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B09A769AA5B60B61D97A94C2 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-Private.xcconfig */;
+			baseConfigurationReference = AC53148CFD553D001B368781 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1008,9 +922,95 @@
 			};
 			name = Debug;
 		};
-		E3875E29FAF154DEB8B94BCE /* Debug */ = {
+		C1EFED0180FD1F353C974EF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DB8DE2293E4DA966D93919B /* Pods-SpriteKitAutoLayoutOSX.debug.xcconfig */;
+			baseConfigurationReference = 529D9D9D50BA491870807C61 /* Pods-Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C5C72B97753FDA5D07FB92EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC53148CFD553D001B368781 /* Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout/Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D1A77B4EE4B5B12FB5ABACAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F4D5FE62257268709AB2FE /* Pods-Tests-SpriteKitAutoLayout-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-SpriteKitAutoLayout/Pods-Tests-SpriteKitAutoLayout-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E277BA7673D0AEFD7CB3F0D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4606A96DACEC064F6DD87E75 /* Pods-SpriteKitAutoLayoutOSX.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1039,70 +1039,70 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		16A582E09124CEFEABF506D7 /* Build configuration list for PBXNativeTarget "Pods-Tests" */ = {
+		371824C4322AE91BC840A5C7 /* Build configuration list for PBXNativeTarget "Pods-Tests-SpriteKitAutoLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1BE031BBA4A604E484CB08C1 /* Debug */,
-				4D2319DD4C4C298E0E3D948B /* Release */,
+				707B5493F1B8111BFBE683DF /* Debug */,
+				D1A77B4EE4B5B12FB5ABACAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		35DB480617F982CD48341B29 /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout" */ = {
+		4F3E1F4535BDC34EFF9BAF0C /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayoutOSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				98C8920ED5BBCAB70BD252C9 /* Debug */,
-				50D1218963FFDD2C1BF0F3A9 /* Release */,
+				E277BA7673D0AEFD7CB3F0D5 /* Debug */,
+				21B3707EB6C95C69627C4CE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		454A9B11C6A9E9ED121B4B27 /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout" */ = {
+		BC683EAC702ACAFF4250B571 /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayout-SpriteKitAutoLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C48624DA4C0D6E840499C9F5 /* Debug */,
-				890F02A045B9E757DA99762F /* Release */,
+				5311938EA6F7C464FEFC1FD1 /* Debug */,
+				41D47FB924A07C23C463BEF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9AD14CA8817ABBEC2264DAE /* Build configuration list for PBXNativeTarget "Pods-Tests-SpriteKitAutoLayout" */ = {
+		C46710592882D03021467AAB /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayoutOSX-SpriteKitAutoLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				35C7AA1402EA96A98B5BFC5B /* Debug */,
-				95EB0587E8C67ACE99A106FA /* Release */,
+				B00D0B78FA8D2689C54B93DE /* Debug */,
+				C5C72B97753FDA5D07FB92EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4A5E12D6688C9887BE3D6E2 /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayoutOSX" */ = {
+		E66FE44099FDD9666E0C45D1 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E3875E29FAF154DEB8B94BCE /* Debug */,
-				A358274046B48846E6B26D28 /* Release */,
+				9590B852545E3BAC09A0D82E /* Debug */,
+				6AF76325C012F30660B149A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BCB73B1F54497A0D6EDE64BB /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayout" */ = {
+		EBBE8BAC6E2E4B68514B9354 /* Build configuration list for PBXNativeTarget "Pods-SpriteKitAutoLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				63EFAB0EC81ADEB3A318BFA8 /* Debug */,
-				B4063D20CB2B6F614F4D7682 /* Release */,
+				9ED775E2E8CD9975D3A5BADF /* Debug */,
+				5DA3575DC1B87ACAF14372CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C88F7657707B763FBCC2EA8C /* Build configuration list for PBXProject "Pods" */ = {
+		FD9BB2FAC9F8F4E965AFA9C2 /* Build configuration list for PBXNativeTarget "Pods-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AD7B51629B23C79FCFE00A27 /* Debug */,
-				318935A0282E506EE3CC2EBA /* Release */,
+				C1EFED0180FD1F353C974EF4 /* Debug */,
+				81D082D358370030F1D77BC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2D18FF17984F8A60DF994E5F /* Project object */;
+	rootObject = 9FED8176AD28BA132BB15853 /* Project object */;
 }
