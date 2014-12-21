@@ -23,6 +23,13 @@
     SKALPlatformView *internalLayoutProxyView = objc_getAssociatedObject(self, @selector(layoutProxyView));
 
     if (!internalLayoutProxyView) {
+        // TODO: consider using specific platform subclass for nodes that have
+        // intrinsic size, e.g. backup SKLabelNode with UI/NSLabel
+        // with same text, font and font size
+        // though it adds additional burden of updating backing view
+        // when label is updated
+        // same goes for SKSpriteNode backup up by UIImageView or alike...
+
         internalLayoutProxyView = [[SKALPlatformView alloc] initWithFrame:self.frame];
         self.layoutProxyView = internalLayoutProxyView;
         self.layoutProxyView.hidden = YES;  // want them hidden, those are just proxies
