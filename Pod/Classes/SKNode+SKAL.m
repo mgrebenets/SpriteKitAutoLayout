@@ -75,10 +75,18 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
     [self SKALRemoveFromParent];
 }
 
+#pragma mark Double Swizzle Guard
+
+// Declare double swizzle guard
+DECLARE_DOUBLE_SWIZZLE_GUARD()
+
 #pragma mark Loading Category
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        // Protect from double swizzling
+        PROTECT_FROM_DOUBLE_SWIZZLE()
+
         // Swizzle time!
         Class nodeClass = [self class];
 

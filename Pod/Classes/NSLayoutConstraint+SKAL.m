@@ -61,9 +61,17 @@ SKAL_MAKE_CATEGORIES_LOADABLE(NSLayoutConstraint_SKAL)
     return [NSLayoutConstraint SKALConstraintWithItem:unwrappedView1 attribute:attr1 relatedBy:relation toItem:unwrappedView2 attribute:attr2 multiplier:multiplier constant:c];
 }
 
+#pragma mark Double Swizzle Guard
+
+// Declare double swizzle guard
+DECLARE_DOUBLE_SWIZZLE_GUARD()
 
 #pragma mark Loading Category
 + (void)load {
+    // Protect from double swizzling
+    PROTECT_FROM_DOUBLE_SWIZZLE()
+
+    // Meta class
     Class metaClass = object_getClass((id)self);
 
     // Constraints with VFL

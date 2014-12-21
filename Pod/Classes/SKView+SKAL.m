@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 i4nApps. All rights reserved.
 //
 
+@import ObjectiveC.runtime;
+
 #import "SKView+SKAL.h"
 #import "SKNode+SKALInternal.h"
 #import "SKALUtils.h"
@@ -39,10 +41,18 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKView_SKAL)
     [self SKALPresentScene:scene transition:transition];
 }
 
+#pragma mark Double Swizzle Guard
+
+// Declare double swizzle guard
+DECLARE_DOUBLE_SWIZZLE_GUARD()
+
 #pragma mark Loading Category
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        // Protect from double swizzling
+        PROTECT_FROM_DOUBLE_SWIZZLE()
+
         // Swizzle time!
         Class viewClass = [self class];
 
