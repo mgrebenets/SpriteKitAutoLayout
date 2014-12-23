@@ -114,7 +114,7 @@ Just like SpriteKit itself SpriteKitAutoLayout is available both for iOS and OSX
 
 ## Roadmap
 
-- Support for non-default anchor points for SKScene (now works fine with (0.5, 0.5) only).
+- Support for non-default anchor points for SKScene. Now works fine with (0.5, 0.5) only.
 - Support for concept of intrinsic size for SKLabelNode and SKSpriteNode.
 - More and more unit tests!
 - Make it more lightweight by using dummy subclass of CALayer for UIView instances.
