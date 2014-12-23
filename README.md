@@ -62,12 +62,12 @@ class DemoScene: SKScene {
 
         // Pin label to left bottom corner, use label's intrinsic size
         let width = Float(leftBottomLabel.frame.width)
-        var format = "H:|[leftBottomLabel(\(width)]"
+        var format = "H:|[leftBottomLabel(\(width))]"
         var constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
         addConstraints(constraints) // add constraints
 
         let height = Float(leftBottomLabel.frame.height)
-        format = "V:|[leftBottomLabel(\(height)]"
+        format = "V:|[leftBottomLabel(\(height))]"
         constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
         addConstraints(constraints) // add constraints
 
