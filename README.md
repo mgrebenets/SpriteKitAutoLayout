@@ -107,6 +107,18 @@ Just like SpriteKit itself SpriteKitAutoLayout is available both for iOS and OSX
 - Min iOS version is 7.0
 - Min OSX version is 10.9
 
+## Limitations & Issues
+
+- Setting constraints for SKLabelNode is tricky if you want to use `.CenterX`, `.CenterY` or other attributes.
+- No support for intrinsic size on labels and sprites.
+
+## Roadmap
+
+- Support for non-default anchor points for SKScene (now works fine with (0.5, 0.5) only).
+- Support for concept of intrinsic size for SKLabelNode and SKSpriteNode.
+- More and more unit tests!
+- Make it more lightweight by using dummy subclass of CALayer for UIView instances.
+
 ## Author
 
 Maksym Grebenets, mgrebenets@gmail.com
