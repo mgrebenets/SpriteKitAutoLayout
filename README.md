@@ -33,66 +33,68 @@ That's pretty much it in regards to configuration, now you can use Auto Layout f
 
 The major difference is that you have to set `autoLayoutEnabled` to `true`, this is similar to setting `translatesAutoresizingMaskIntoConstraints` to `NO` in UIKit/AppKit.
 
-    import SpriteKit
+```swift
+import SpriteKit
 
-    class DemoScene: SKScene {
-        override func didMoveToView(view: SKView) {
-            self.scaleMode = .ResizeFill
-            self.name = "DemoScene"
+class DemoScene: SKScene {
+    override func didMoveToView(view: SKView) {
+        self.scaleMode = .ResizeFill
+        self.name = "DemoScene"
 
-            // Add label to put it left bottom corner
-            let leftBottomLabel = SKLabelNode()
-            leftBottomLabel.text = "Left Bottom"
-            leftBottomLabel.name = "leftBottomLabel"    // a C language identifier
-            leftBottomLabel.autoLayoutEnabled = true    // enable autolayout for this node
-            addChild(leftBottomLabel)
+        // Add label to put it left bottom corner
+        let leftBottomLabel = SKLabelNode()
+        leftBottomLabel.text = "Left Bottom"
+        leftBottomLabel.name = "leftBottomLabel"    // a C language identifier
+        leftBottomLabel.autoLayoutEnabled = true    // enable autolayout for this node
+        addChild(leftBottomLabel)
 
-            // Add color sprite with non-default anchor point to put in the center
-            let centerSprite = SKSpriteNode(color: SKColor.greenColor(), size: CGSizeZero)
-            centerSprite.name = "centerSprite"
-            centerSprite.anchorPoint = CGPoint(x: 1, y: 1)  // non-default anchor point
-            centerSprite.autoLayoutEnabled = true
-            addChild(centerSprite)
+        // Add color sprite with non-default anchor point to put in the center
+        let centerSprite = SKSpriteNode(color: SKColor.greenColor(), size: CGSizeZero)
+        centerSprite.name = "centerSprite"
+        centerSprite.anchorPoint = CGPoint(x: 1, y: 1)  // non-default anchor point
+        centerSprite.autoLayoutEnabled = true
+        addChild(centerSprite)
 
-            // Get dictionary of all nodes in this scene
-            let nodesDic = nodes()  // self. is implied
+        // Get dictionary of all nodes in this scene
+        let nodesDic = nodes()  // self. is implied
 
-            // Configure Auto Layout constraints
+        // Configure Auto Layout constraints
 
-            // Pin label to left bottom corner, use label's intrinsic size
-            let width = Float(leftBottomLabel.frame.width)
-            var format = "H:|[leftBottomLabel(\(width)]"
-            var constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
-            addConstraints(constraints) // add constraints
+        // Pin label to left bottom corner, use label's intrinsic size
+        let width = Float(leftBottomLabel.frame.width)
+        var format = "H:|[leftBottomLabel(\(width)]"
+        var constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
+        addConstraints(constraints) // add constraints
 
-            let height = Float(leftBottomLabel.frame.height)
-            format = "V:|[leftBottomLabel(\(height)]"
-            constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
-            addConstraints(constraints) // add constraints
+        let height = Float(leftBottomLabel.frame.height)
+        format = "V:|[leftBottomLabel(\(height)]"
+        constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
+        addConstraints(constraints) // add constraints
 
-            // Put color sprite in the center
-            // Make it's size related to parent (aka "superview")
+        // Put color sprite in the center
+        // Make it's size related to parent (aka "superview")
 
-            // Constraint center (x, y) to parent's (x, y)
-            // it's save to do it here because parent is skene filling whole SKView
-            var constraint = NSLayoutConstraint(item: centerSprite, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0)
-            addConstraint(constraint)
-            constraint = NSLayoutConstraint(item: centerSprite, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0)
-            addConstraint(constraint)
+        // Constraint center (x, y) to parent's (x, y)
+        // it's save to do it here because parent is skene filling whole SKView
+        var constraint = NSLayoutConstraint(item: centerSprite, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0)
+        addConstraint(constraint)
+        constraint = NSLayoutConstraint(item: centerSprite, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0)
+        addConstraint(constraint)
 
-            // Make the the centerSprite's width to be 20% of the parent's width
-            constraint = NSLayoutConstraint(item: centerSprite, attribute: .Width, relatedBy: .Equal, toItem: self, attribute: .Width, multiplier: 0.2, constant: 0)
-            addConstraint(constraint)
+        // Make the the centerSprite's width to be 20% of the parent's width
+        constraint = NSLayoutConstraint(item: centerSprite, attribute: .Width, relatedBy: .Equal, toItem: self, attribute: .Width, multiplier: 0.2, constant: 0)
+        addConstraint(constraint)
 
-            // Make the centerSprite's height to be equal to centerSprite's width
-            constraint = NSLayoutConstraint(item: centerSprite, attribute: .Height, relatedBy: .Equal, toItem: centerSprite, attribute: .Height, multiplier: 1, constant: 0)
-            centerSprite.addConstraint(constraint)  // centerSprite's constraint on itself
-        }
-
-        override func didChangeSize(oldSize: CGSize) {
-            layoutNodes()
-        }
+        // Make the centerSprite's height to be equal to centerSprite's width
+        constraint = NSLayoutConstraint(item: centerSprite, attribute: .Height, relatedBy: .Equal, toItem: centerSprite, attribute: .Height, multiplier: 1, constant: 0)
+        centerSprite.addConstraint(constraint)  // centerSprite's constraint on itself
     }
+
+    override func didChangeSize(oldSize: CGSize) {
+        layoutNodes()
+    }
+}
+```
 
 ## Example
 
