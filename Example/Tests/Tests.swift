@@ -6,4 +6,18 @@
 //  Copyright (c) 2014 maksym.grebenets. All rights reserved.
 //
 
-import Foundation
+import XCTest
+
+class SKALSwiftTests: XCTestCase {
+    override func setUp() {
+
+    }
+
+    override func tearDown() {
+
+    }
+
+    func test() {
+        XCTAssert(true, "Pass")
+    }
+}
