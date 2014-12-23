@@ -1,6 +1,6 @@
 # SpriteKitAutoLayout
 
-[![CI Status](http://img.shields.io/travis/maksym.grebenets/SpriteKitAutoLayout.svg?style=flat)](https://travis-ci.org/maksym.grebenets/SpriteKitAutoLayout)
+[![CI Status](http://img.shields.io/travis/mgrebenets/SpriteKitAutoLayout.svg?style=flat)](https://travis-ci.org/mgrebenets/SpriteKitAutoLayout)
 [![Version](https://img.shields.io/cocoapods/v/SpriteKitAutoLayout.svg?style=flat)](http://cocoadocs.org/docsets/SpriteKitAutoLayout)
 [![License](https://img.shields.io/cocoapods/l/SpriteKitAutoLayout.svg?style=flat)](http://cocoadocs.org/docsets/SpriteKitAutoLayout)
 [![Platform](https://img.shields.io/cocoapods/p/SpriteKitAutoLayout.svg?style=flat)](http://cocoadocs.org/docsets/SpriteKitAutoLayout)

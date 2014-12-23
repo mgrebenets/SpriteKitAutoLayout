@@ -3,7 +3,7 @@
 //  SpriteKitAutoLayout
 //
 //  Created by CocoaPods on 12/17/2014.
-//  Copyright (c) 2014 maksym.grebenets. All rights reserved.
+//  Copyright (c) 2014 Maksym Grebenets. All rights reserved.
 //
 
 #import "SKALAppDelegate.h"
