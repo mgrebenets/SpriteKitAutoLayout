@@ -7,7 +7,7 @@
 
 SpriteKitAutoLayout (SKAL) is a framework that brings the power of [Auto Layout](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/Introduction/Introduction.html) into your [SpriteKit](https://developer.apple.com/library/ios/documentation/GraphicsAnimation/Conceptual/SpriteKit_PG/Introduction/Introduction.html) apps. Just like SpriteKit itself SpriteKitAutoLayout is available both for iOS and OSX platforms (since version 7.0 and 10.9 accordingly).
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/5BaXF5eCJp4" frameborder="0" allowfullscreen></iframe>
+[![SpriteKitAutoLayout](http://img.youtube.com/vi/5BaXF5eCJp4/0.jpg)](http://www.youtube.com/watch?v=5BaXF5eCJp4)
 
 ## Usage
 
