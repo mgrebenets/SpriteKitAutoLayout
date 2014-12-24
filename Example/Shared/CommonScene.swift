@@ -18,7 +18,7 @@ class CommonScene: SKScene {
         addChild(backButton)
 
         // back button
-        let nodesDic = nodes()
+        let nodesDic = self.nodesDic()
 
         var format = "H:|[\(BackButtonName)(80)]"
         var constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)

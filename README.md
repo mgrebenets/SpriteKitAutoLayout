@@ -56,7 +56,7 @@ class DemoScene: SKScene {
         addChild(centerSprite)
 
         // Get dictionary of all nodes in this scene
-        let nodesDic = nodes()  // self. is implied
+        let nodesDic = self.nodesDic()  // self. is required to avoid compile error
 
         // Configure Auto Layout constraints
 
@@ -93,6 +93,27 @@ class DemoScene: SKScene {
     override func didChangeSize(oldSize: CGSize) {
         layoutNodes()
     }
+}
+```
+
+### Use With Other Auto Layout Libraries
+
+Want to use it with other Auto Layout wrappers?
+No problem, use SKNode's `layoutProxyView()` read-only property exposed since `0.2.0`.
+
+For example, this is what you code would look like with [Cartography](https://github.com/robb/Cartography).
+
+```swift
+let button = SKSpriteNode(color: SKColor.greenColor(), size: CGSizeZero)
+button.autoLayoutEnabled = true
+addChild(button)
+
+layout(button.layoutProxyView()) { button in
+    // button in closure is not the same as 'let button' declared before
+    button.left == button.superview!.left   // same as "H:|[button]"
+    button.bottom == button.superview!.bottom   // same as "V:|[button]"
+    button.height == button.superview!.height * 0.1
+    button.width == button.height
 }
 ```
 

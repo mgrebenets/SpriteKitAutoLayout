@@ -91,9 +91,9 @@ class DemoScene1: CommonScene {
 
 
         // All the nodes are added, cached child nodes dictionary ro reuse later
-        let nodesDic = nodes()
+        let nodesDic = self.nodesDic()
 
-        let buttonsNodesDic = buttonsNode.nodes()
+        let buttonsNodesDic = buttonsNode.nodesDic()
 
         var format = ""
         var constraints = [AnyObject]()

@@ -27,7 +27,7 @@ class MainScene: CommonScene {
         }
 
         var format = "V:|-20-[label1]-20-[label2(label1)]-20-[label3(label1)]-40-|"
-        var constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodes())
+        var constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic())
         addConstraints(constraints)
 
 //        layoutNodes()
