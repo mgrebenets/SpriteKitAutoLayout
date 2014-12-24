@@ -5,19 +5,18 @@
 [![License](https://img.shields.io/cocoapods/l/SpriteKitAutoLayout.svg?style=flat)](http://cocoadocs.org/docsets/SpriteKitAutoLayout)
 [![Platform](https://img.shields.io/cocoapods/p/SpriteKitAutoLayout.svg?style=flat)](http://cocoadocs.org/docsets/SpriteKitAutoLayout)
 
-SpriteKitAutoLayout (SKAL) is a framework that brings the power of [Auto Layout](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/Introduction/Introduction.html) into your [SpriteKit](https://developer.apple.com/library/ios/documentation/GraphicsAnimation/Conceptual/SpriteKit_PG/Introduction/Introduction.html) apps.
+SpriteKitAutoLayout (SKAL) is a framework that brings the power of [Auto Layout](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/Introduction/Introduction.html) to your [SpriteKit](https://developer.apple.com/library/ios/documentation/GraphicsAnimation/Conceptual/SpriteKit_PG/Introduction/Introduction.html) apps.
 
 [![SpriteKitAutoLayout](http://img.youtube.com/vi/5BaXF5eCJp4/0.jpg)](http://www.youtube.com/watch?v=5BaXF5eCJp4)
 
 ## Good / Bad For
-SpriteKitAutoLayout is **good** for the same purpose it's good with UIKit or AppKit, that is to layout your app UI elements, such as buttons, labels, etc. Auto Layout will handle your UI layout when your scene size changes (on rotation for iOS or window resize on OSX).
+SpriteKitAutoLayout is **good** for the same purpose Auto Layout is good with UIKit or AppKit, that is to layout your app UI elements, such as buttons, labels, etc. Auto Layout will handle your UI layout when your scene size changes (on rotation for iOS or window resize on OSX).
 
-It is **not good** for things that don't need any layout as such. For example a sprite that represents one of your (game) characters, which moves around, changes it's scale, rotates and does other crazy things.
+It is **not good** for things that don't need any layout as such. For example a sprite that represents one of your (game) characters, which moves around, changes it's scale, rotates, animates and does other crazy things.
 
 ## Installation
 
-SpriteKitAutoLayout is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+SpriteKitAutoLayout is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
     pod "SpriteKitAutoLayout"
 
@@ -25,7 +24,9 @@ it, simply add the following line to your Podfile:
 
 Start with including the header file.
 
-    #import <SpriteKitAutoLayout/SpriteKitAutoLayout.h>
+```objective-c
+#import <SpriteKitAutoLayout/SpriteKitAutoLayout.h>
+```
 
 Put it in your Bridging Header if your project is Swift project.
 
@@ -96,9 +97,10 @@ class DemoScene: SKScene {
 }
 ```
 
-### Use With Other Auto Layout Libraries
+### Use With Other Auto Layout Frameworks
 
-Want to use it with other Auto Layout wrappers?
+Want to use it with other Auto Layout wrappers and helpers?
+
 No problem, use SKNode's `layoutProxyView()` read-only property exposed since `0.2.0`.
 
 For example, this is what you code would look like with [Cartography](https://github.com/robb/Cartography).
