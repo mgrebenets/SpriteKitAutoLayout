@@ -18,7 +18,7 @@
  Loaded laizily when node is added as a child.
  For scenes set with container SKView when scene is presented.
  */
-@property (nonatomic, strong) SKALPlatformView *layoutProxyView;
+@property (nonatomic, strong) SKALPlatformView *internalLayoutProxyView;
 
 /**
  Customazible Y coordinate flip flag.

@@ -27,8 +27,8 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKView_SKAL)
     for (SKALPlatformView *subview in subviews) {
         [subview removeFromSuperview];
     }
-    [scene.layoutProxyView removeConstraints:scene.layoutProxyView.constraints];
-    scene.layoutProxyView = self;
+    [scene.internalLayoutProxyView removeConstraints:scene.internalLayoutProxyView.constraints];
+    scene.internalLayoutProxyView = self;
 }
 
 - (void)SKALPresentScene:(SKScene *)scene {

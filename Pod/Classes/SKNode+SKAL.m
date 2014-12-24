@@ -37,23 +37,23 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
 
 #pragma mark New Child Management Selectors
 - (void)SKALAddChild:(SKNode *)node {
-    if (!node.layoutProxyView.superview) {
-        [self.layoutProxyView addSubview:node.layoutProxyView];
+    if (!node.internalLayoutProxyView.superview) {
+        [self.internalLayoutProxyView addSubview:node.internalLayoutProxyView];
     }
     [self SKALAddChild:node];
 }
 
 - (void)SKALInsertChild:(SKNode *)node atIndex:(NSInteger)index {
-    if (!node.layoutProxyView.superview) {
-        [self.layoutProxyView SKALInsertSubview:node.layoutProxyView atIndex:index];
+    if (!node.internalLayoutProxyView.superview) {
+        [self.internalLayoutProxyView SKALInsertSubview:node.internalLayoutProxyView atIndex:index];
     }
     [self SKALInsertChild:node atIndex:index];
 }
 
 - (void)SKALRemoveChildrenInArray:(NSArray *)nodes {
     for (SKNode *node in nodes) {
-        if (node.layoutProxyView.superview) {
-            [node.layoutProxyView removeFromSuperview];
+        if (node.internalLayoutProxyView.superview) {
+            [node.internalLayoutProxyView removeFromSuperview];
         }
     }
     [self SKALRemoveChildrenInArray:nodes];
@@ -61,16 +61,16 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
 
 - (void)SKALRemoveAllChildren {
     for (SKNode *node in self.children) {
-        if (node.layoutProxyView.superview) {
-            [node.layoutProxyView removeFromSuperview];
+        if (node.internalLayoutProxyView.superview) {
+            [node.internalLayoutProxyView removeFromSuperview];
         }
     }
     [self SKALRemoveAllChildren];
 }
 
 - (void)SKALRemoveFromParent {
-    if (self.layoutProxyView.superview) {
-        [self.layoutProxyView removeFromSuperview];
+    if (self.internalLayoutProxyView.superview) {
+        [self.internalLayoutProxyView removeFromSuperview];
     }
     [self SKALRemoveFromParent];
 }
@@ -109,27 +109,31 @@ DECLARE_DOUBLE_SWIZZLE_GUARD()
 
 #pragma mark - Managing Constraints
 - (NSArray *)constraints {
-    return self.layoutProxyView.constraints;
+    return self.internalLayoutProxyView.constraints;
 }
 
 - (void)addConstraint:(NSLayoutConstraint *)constraint {
-    [self.layoutProxyView addConstraint:constraint];
+    [self.internalLayoutProxyView addConstraint:constraint];
 }
 
 - (void)addConstraints:(NSArray *)constraints {
-    [self.layoutProxyView addConstraints:constraints];
+    [self.internalLayoutProxyView addConstraints:constraints];
 }
 
 - (void)removeConstraint:(NSLayoutConstraint *)constraint {
-    [self.layoutProxyView removeConstraint:constraint];
+    [self.internalLayoutProxyView removeConstraint:constraint];
 }
 
 - (void)removeConstraints:(NSArray *)constraints {
-    [self.layoutProxyView removeConstraints:constraints];
+    [self.internalLayoutProxyView removeConstraints:constraints];
 }
 
 #pragma mark - Managing Layout
-- (NSDictionary *)nodes {
+- (SKALPlatformView *)layoutProxyView {
+    return self.internalLayoutProxyView;
+}
+
+- (NSDictionary *)nodesDic {
     NSMutableDictionary *namedNodes = [NSMutableDictionary dictionaryWithCapacity:self.children.count];
     // Return only those children which have names
     [self enumerateChildNodesWithName:@"*" usingBlock:^(SKNode *node, BOOL *stop) {
@@ -144,9 +148,9 @@ DECLARE_DOUBLE_SWIZZLE_GUARD()
 - (void)setAutoLayoutEnabled:(BOOL)enabled {
     objc_setAssociatedObject(self, @selector(isAutoLayoutEnabled), @(enabled), OBJC_ASSOCIATION_ASSIGN);
     if (enabled) {
-        self.layoutProxyView.translatesAutoresizingMaskIntoConstraints = NO;
+        self.internalLayoutProxyView.translatesAutoresizingMaskIntoConstraints = NO;
     } else {
-        self.layoutProxyView = nil;
+        self.internalLayoutProxyView = nil;
     }
 }
 
@@ -169,7 +173,7 @@ DECLARE_DOUBLE_SWIZZLE_GUARD()
     // need to add layout proxy view each time
     // there are cases like presenting scene for 1st time where nested nodes
     // would not be sized properly without this call
-    [self.layoutProxyView SKALLayoutSubviews];
+    [self.internalLayoutProxyView SKALLayoutSubviews];
 
     // TODO: scene's anchor point will break things
 
@@ -183,9 +187,9 @@ DECLARE_DOUBLE_SWIZZLE_GUARD()
 
         // Flip the frame if required
         // to make visual formatting language fully compatible with UIKit/AppKit
-        CGRect flippedFrame = [self.class flippedFrame:child.layoutProxyView.layoutRect inParentRect:self.layoutProxyView.layoutRect];
+        CGRect flippedFrame = [self.class flippedFrame:child.internalLayoutProxyView.layoutRect inParentRect:self.internalLayoutProxyView.layoutRect];
 
-        SKALLogDebug(@"\n---%@---\n\tParent proxy frame: %@\n\tChild proxy frame: %@\n\tFlipped proxy frame: %@\n\tParent node frame: %@\n\tChild node frame: %@", child.name, SKALNSStringFromRect(self.layoutProxyView.layoutRect), SKALNSStringFromRect(child.layoutProxyView.layoutRect), SKALNSStringFromRect(flippedFrame), SKALNSStringFromRect(self.frame), SKALNSStringFromRect(child.frame));
+        SKALLogDebug(@"\n---%@---\n\tParent proxy frame: %@\n\tChild proxy frame: %@\n\tFlipped proxy frame: %@\n\tParent node frame: %@\n\tChild node frame: %@", child.name, SKALNSStringFromRect(self.internalLayoutProxyView.layoutRect), SKALNSStringFromRect(child.internalLayoutProxyView.layoutRect), SKALNSStringFromRect(flippedFrame), SKALNSStringFromRect(self.frame), SKALNSStringFromRect(child.frame));
 
         // Sizeable vs Sizeless nodes
         if ([child respondsToSelector:@selector(setSize:)]) {

@@ -34,7 +34,7 @@ SKAL_MAKE_CATEGORIES_LOADABLE(NSLayoutConstraint_SKAL)
     if ([firstView isKindOfClass:[SKNode class]]) {
         // dealing with SpriteKit support, unwrap all the views
         for (NSString *key in views.keyEnumerator) {
-            unwrappedViews[key] = ((SKNode *)views[key]).layoutProxyView;
+            unwrappedViews[key] = ((SKNode *)views[key]).internalLayoutProxyView;
         }
     }
 
@@ -55,8 +55,8 @@ SKAL_MAKE_CATEGORIES_LOADABLE(NSLayoutConstraint_SKAL)
     if ([view1 isKindOfClass:[SKNode class]]) {
         NSAssert(!view2 || [view2 isKindOfClass:[SKNode class]], @"All items must be SKNode subclass!");
         // using for SpriteKit, unwrap views
-        unwrappedView1 = ((SKNode *) view1).layoutProxyView;
-        unwrappedView2 = view2 ? ((SKNode *) view2).layoutProxyView : nil;
+        unwrappedView1 = ((SKNode *) view1).internalLayoutProxyView;
+        unwrappedView2 = view2 ? ((SKNode *) view2).internalLayoutProxyView : nil;
     }
     return [NSLayoutConstraint SKALConstraintWithItem:unwrappedView1 attribute:attr1 relatedBy:relation toItem:unwrappedView2 attribute:attr2 multiplier:multiplier constant:c];
 }

@@ -9,6 +9,7 @@
 @import SpriteKit;
 
 #import "SKView+SKAL.h"
+#import "SKALUtils.h"
 
 /**
  Auto Layout extension for `SKNode`
@@ -49,11 +50,18 @@
 #pragma mark Managing Nodes Layout
 
 /**
+ Returns layout proxy view which is a platform specific view.
+ UIView for UIKit app (iOS).
+ NSView for AppKit app (OSX).
+ */
+- (SKALPlatformView *)layoutProxyView;
+
+/**
  Returns dictionary of all child nodes that have name.
  Use it for creating constraints with visual formatting language.
  @return Dictionary nodes that have name.
  */
-- (NSDictionary *)nodes;
+- (NSDictionary *)nodesDic;
 
 /**
  Autolayout enabled property.
