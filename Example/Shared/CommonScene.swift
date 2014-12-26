@@ -41,7 +41,10 @@ class CommonScene: SKScene {
     #else
     override func mouseDown(theEvent: NSEvent) {
         var touchLocation = theEvent.locationInNode(self)
-        handleTouchBeganAtLocation(CGPoint(x: touchLocation.x, y: CGRectGetHeight(self.frame) - touchLocation.y))
+        if view!.flipped {
+            touchLocation.y = CGRectGetHeight(frame) - touchLocation.y
+        }
+        handleTouchBeganAtLocation(touchLocation)
     }
     #endif
 
