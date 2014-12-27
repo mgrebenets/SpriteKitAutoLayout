@@ -22,12 +22,19 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKView_SKAL)
 
 #pragma mark New Scene Management Selectors
 - (void)prepareForPresentingScene:(SKScene *)scene {
+
+    // remove constraints
+    [scene.internalLayoutProxyView removeConstraints:scene.internalLayoutProxyView.constraints];
+
     // if don't copy will crash on OSX because mutating array while enumerating
     NSArray *subviews = [self.subviews copy];
     for (SKALPlatformView *subview in subviews) {
-        [subview removeFromSuperview];
+        if (subview.superview) {
+            [subview removeFromSuperview];
+        }
     }
-    [scene.internalLayoutProxyView removeConstraints:scene.internalLayoutProxyView.constraints];
+
+    // Cause of OSX crashes if internal proxy views are not released properly (see node management)
     scene.internalLayoutProxyView = self;
 }
 

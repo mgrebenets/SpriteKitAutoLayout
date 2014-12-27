@@ -10,11 +10,15 @@
  Cross platform defines
  */
 #if TARGET_OS_IPHONE
+#define SKAL_IOS    (YES)
+#define SKAL_OSX    (NO)
 #define SKALPlatformView UIView
 #define SKALNSStringFromRect NSStringFromCGRect
 #define SKALNSStringFromSize NSStringFromCGSize
 #define SKALNSStringFromPoint NSStringFromCGPoint
 #else
+#define SKAL_IOS    (NO)
+#define SKAL_OSX    (YES)
 #define SKALPlatformView NSView
 #define SKALNSStringFromRect NSStringFromRect
 #define SKALNSStringFromSize NSStringFromSize
@@ -23,7 +27,7 @@
 
 
 // TODO: remove for production
-#define SKAL_DEBUG  DEBUG
+//#define SKAL_DEBUG  DEBUG
 
 /**
  Logging

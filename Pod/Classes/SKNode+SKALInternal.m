@@ -9,6 +9,7 @@
 @import ObjectiveC.runtime;
 #import "SKNode+SKAL.h"
 #import "SKNode+SKALInternal.h"
+#import "SKALUtils.h"
 
 @implementation SKNode (SKALInternal)
 
@@ -30,9 +31,11 @@
         // when label is updated
         // same goes for SKSpriteNode backup up by UIImageView or alike...
 
+        // Make sure this proxy view is set to nil when node is no more to avoid OSX crashes!
+        // look into swizzled "remove child" methods
         localLayoutProxyView = [[SKALPlatformView alloc] initWithFrame:self.frame];
+        localLayoutProxyView.hidden = YES;  // want them hidden, those are just proxies
         self.internalLayoutProxyView = localLayoutProxyView;
-        self.internalLayoutProxyView.hidden = YES;  // want them hidden, those are just proxies
     }
 
     return localLayoutProxyView;
@@ -40,9 +43,13 @@
 
 #pragma mark Flipped Geometry
 + (BOOL)isFlipped {
-    // Return YES for UIKit/AppKit compatibility so that "V:|" alignemtns means "top"
+    // Return YES for UIKit, NO for AppKit
+    // to account for compatibility so that "V:|" alignemtns means "top"
     // This is needed since SpriteKit has it's coordinate system origin at bottom left corner by default
-    return YES;
+
+    // TODO: needs more research, this way works with default iOS setup
+    // and with OSX setup where the root NSView returns YES for isFlipped
+    return SKAL_IOS;
 }
 
 + (CGFloat)flipMultiplier {

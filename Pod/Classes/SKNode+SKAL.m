@@ -36,6 +36,14 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
 @implementation SKNode (SKAL)
 
 #pragma mark New Child Management Selectors
+- (void)removeLayoutProxyViewFromSuperview {
+    if (self.internalLayoutProxyView.superview) {
+        [self.internalLayoutProxyView removeFromSuperview];
+    }
+    // OSX crash fix! Tried setting it to nil in swizzled dealloc - no luck.
+    self.internalLayoutProxyView = nil;
+}
+
 - (void)SKALAddChild:(SKNode *)node {
     if (!node.internalLayoutProxyView.superview) {
         [self.internalLayoutProxyView addSubview:node.internalLayoutProxyView];
@@ -52,26 +60,20 @@ SKAL_MAKE_CATEGORIES_LOADABLE(SKNode_SKAL)
 
 - (void)SKALRemoveChildrenInArray:(NSArray *)nodes {
     for (SKNode *node in nodes) {
-        if (node.internalLayoutProxyView.superview) {
-            [node.internalLayoutProxyView removeFromSuperview];
-        }
+        [node removeLayoutProxyViewFromSuperview];
     }
     [self SKALRemoveChildrenInArray:nodes];
 }
 
 - (void)SKALRemoveAllChildren {
     for (SKNode *node in self.children) {
-        if (node.internalLayoutProxyView.superview) {
-            [node.internalLayoutProxyView removeFromSuperview];
-        }
+        [node removeLayoutProxyViewFromSuperview];
     }
     [self SKALRemoveAllChildren];
 }
 
 - (void)SKALRemoveFromParent {
-    if (self.internalLayoutProxyView.superview) {
-        [self.internalLayoutProxyView removeFromSuperview];
-    }
+    [self removeLayoutProxyViewFromSuperview];
     [self SKALRemoveFromParent];
 }
 
