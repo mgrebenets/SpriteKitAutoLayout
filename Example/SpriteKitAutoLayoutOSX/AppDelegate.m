@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SPriteKitAutoLayoutOSX-Swift.h"
+#import "SpriteKitAutoLayoutOSX-Swift.h"
 
 @implementation AppDelegate
 

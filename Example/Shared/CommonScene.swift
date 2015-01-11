@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Maksym Grebenets. All rights reserved.
 //
 
+import SpriteKit
 
 class CommonScene: SKScene {
 

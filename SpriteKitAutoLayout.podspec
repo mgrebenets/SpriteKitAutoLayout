@@ -5,9 +5,6 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                        This library enables Auto Layout support for SpriteKit.
                        Works both for iOS and OSX.
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
                        DESC
   s.homepage         = "https://github.com/mgrebenets/SpriteKitAutoLayout"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"

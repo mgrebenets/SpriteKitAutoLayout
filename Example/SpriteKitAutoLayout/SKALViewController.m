@@ -8,7 +8,7 @@
 
 @import SpriteKit;
 #import "SKALViewController.h"
-#import "SPriteKitAutoLayout-Swift.h"
+#import "SpriteKitAutoLayout-Swift.h"
 
 @interface SKALViewController ()
 
@@ -27,29 +27,21 @@
 
     SKView *skView = (SKView *)self.view;
     SKScene *scene = [[MainScene alloc] initWithSize: skView.bounds.size];
-//    SKScene *scene = [[DemoScene1 alloc] initWithSize: skView.bounds.size];
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
     skView.ignoresSiblingOrder = YES;
 
     scene.scaleMode = SKSceneScaleModeResizeFill;
 
-
-    NSLog(@"\n===Subviews count before: %lu", (unsigned long)skView.subviews.count);
-    NSLog(@"\n===Constraints count before: %lu", (unsigned long)skView.constraints.count);
     [skView presentScene:scene];
-    NSLog(@"\n===Subviews count after: %lu", (unsigned long)skView.subviews.count);
-    NSLog(@"\n===Constraints count after: %lu", (unsigned long)skView.constraints.count);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    NSLog(@"viewDidAppear");
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSLog(@"viewWilAppear");
 }
 
 
