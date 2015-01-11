@@ -34,11 +34,15 @@ That's pretty much it in regards to configuration, now you can use Auto Layout f
 
 The major difference is that you have to set `autoLayoutEnabled` to `true`, this is similar to setting `translatesAutoresizingMaskIntoConstraints` to `NO` in UIKit/AppKit.
 
+You also have to call `layoutNodes` method of `SKScene` excplicitly. The best way to do that is in `didChangeSize:` implementation.
+
 ```swift
 import SpriteKit
 
 class DemoScene: SKScene {
     override func didMoveToView(view: SKView) {
+        super.didMoveToView(view)
+
         self.scaleMode = .ResizeFill
         self.name = "DemoScene"
 
