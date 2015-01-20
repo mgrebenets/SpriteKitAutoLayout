@@ -57,6 +57,11 @@
 - (SKALPlatformView *)layoutProxyView;
 
 /**
+ Returns the frame of layout proxy view
+ */
+- (CGRect)layoutFrame;
+
+/**
  Returns dictionary of all child nodes that have name.
  Use it for creating constraints with visual formatting language.
  @return Dictionary nodes that have name.
@@ -70,7 +75,7 @@
 @property (nonatomic, assign, getter=isAutoLayoutEnabled) BOOL autoLayoutEnabled;
 
 /**
- Layout nodes recursively.
+ Auto layout nodes recursively.
  */
-- (void)layoutNodes;
+- (void)autoLayoutNodes;
 @end

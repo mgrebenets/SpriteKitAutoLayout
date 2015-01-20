@@ -34,7 +34,7 @@ That's pretty much it in regards to configuration, now you can use Auto Layout f
 
 The major difference is that you have to set `autoLayoutEnabled` to `true`, this is similar to setting `translatesAutoresizingMaskIntoConstraints` to `NO` in UIKit/AppKit.
 
-You also have to call `layoutNodes` method of `SKScene` excplicitly. The best way to do that is in `didChangeSize:` implementation.
+You also have to call `layoutNodes` method of `SKScene` excplicitly. The best way to do that is in `didChangeSize:` implementation. Note, that you have to dispatch it asynchronously on main queue if you want you UI updates to be properly applied.
 
 ```swift
 import SpriteKit
@@ -96,7 +96,9 @@ class DemoScene: SKScene {
     }
 
     override func didChangeSize(oldSize: CGSize) {
-        layoutNodes()
+        dispatch_async(dispatch_get_main_queue()) {
+            layoutNodes()
+        }
     }
 }
 ```

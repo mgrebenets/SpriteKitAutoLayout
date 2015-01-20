@@ -135,6 +135,10 @@ DECLARE_DOUBLE_SWIZZLE_GUARD()
     return self.internalLayoutProxyView;
 }
 
+- (CGRect)layoutFrame {
+    return self.layoutProxyView.frame;
+}
+
 - (NSDictionary *)nodesDic {
     NSMutableDictionary *namedNodes = [NSMutableDictionary dictionaryWithCapacity:self.children.count];
     // Return only those children which have names
@@ -160,11 +164,9 @@ DECLARE_DOUBLE_SWIZZLE_GUARD()
     return [objc_getAssociatedObject(self, @selector(isAutoLayoutEnabled)) boolValue];
 }
 
-- (void)layoutNodes {
+- (void)autoLayoutNodes {
     SKALLogDebug(@"\n===Layout for %@===", self.name);
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self layoutNodesRecursively];
-    });
+    [self layoutNodesRecursively];
 }
 
 + (CGRect)flippedFrame:(CGRect)frame inParentRect:(CGRect)parentRect {
