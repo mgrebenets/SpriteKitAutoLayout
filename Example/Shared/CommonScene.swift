@@ -31,7 +31,7 @@ class CommonScene: SKScene {
 
     override func didChangeSize(oldSize: CGSize) {
         dispatch_async(dispatch_get_main_queue()) {
-            autoLayoutNodes()
+            self.autoLayoutNodes()
         }
     }
 
