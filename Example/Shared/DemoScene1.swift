@@ -166,7 +166,6 @@ class DemoScene1: CommonScene {
         constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: buttonsNodesDic)
         buttonsNode.addConstraints(constraints)
         
-//        layoutNodes()
     }
 
     override func handleTouchBeganAtLocation(location: CGPoint) {

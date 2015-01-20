@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SpriteKitAutoLayout"
-  s.version          = "0.3.0"
+  s.version          = "0.3.1"
   s.summary          = "Auto Layout support for SpriteKit (iOS & OSX)"
   s.description      = <<-DESC
                        This library enables Auto Layout support for SpriteKit.
