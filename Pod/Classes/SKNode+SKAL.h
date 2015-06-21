@@ -54,7 +54,7 @@
  UIView for UIKit app (iOS).
  NSView for AppKit app (OSX).
  */
-- (SKALPlatformView *)layoutProxyView;
+@property (nonatomic, readonly) SKALPlatformView * __nonnull layoutProxyView;
 
 /**
  Returns the frame of layout proxy view
@@ -66,7 +66,7 @@
  Use it for creating constraints with visual formatting language.
  @return Dictionary nodes that have name.
  */
-- (NSDictionary *)nodesDic;
+@property (nonatomic, readonly) NSDictionary * __nonnull nodesDic;
 
 /**
  Autolayout enabled property.

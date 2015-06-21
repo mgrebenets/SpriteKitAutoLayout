@@ -141,9 +141,9 @@ DECLARE_DOUBLE_SWIZZLE_GUARD()
 
 - (NSDictionary *)nodesDic {
     NSMutableDictionary *namedNodes = [NSMutableDictionary dictionaryWithCapacity:self.children.count];
-    // Return only those children which have names
+    // Return only those children which have non-empty names
     [self enumerateChildNodesWithName:@"*" usingBlock:^(SKNode *node, BOOL *stop) {
-        if (![node.name isEqualToString:@""]) {
+        if (node.name && ![node.name isEqualToString:@""]) {
             namedNodes[node.name] = node;
         }
     }];
