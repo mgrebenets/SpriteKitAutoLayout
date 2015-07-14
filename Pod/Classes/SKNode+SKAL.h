@@ -21,31 +21,31 @@
  Returns the constraints held by the view.
  @return View contraints.
  */
-- (NSArray *)constraints;
+@property (readonly, copy) NSArray<NSLayoutConstraint *> * __nullable constraints;
 
 /**
  Adds a constraint on the layout of the receiving view or its subviews.
  @param constraint Layout constraint.
  */
-- (void)addConstraint:(NSLayoutConstraint *)constraint;
+- (void)addConstraint:(NSLayoutConstraint * __nonnull)constraint;
 
 /**
  Adds multiple constraints on the layout of the receiving view or its subviews.
  @param constraints Array of constraints to add.
  */
-- (void)addConstraints:(NSArray *)constraints;
+- (void)addConstraints:(NSArray * __nonnull)constraints;
 
 /**
  Removes the specified constraint from the view.
  @param constraint Constraint to remove.
  */
-- (void)removeConstraint:(NSLayoutConstraint *)constraint;
+- (void)removeConstraint:(NSLayoutConstraint * __nonnull)constraint;
 
 /**
  Removes the specified constraints from the view.
  @param constraints Array of constraints to remove.
  */
-- (void)removeConstraints:(NSArray *)constraints;
+- (void)removeConstraints:(NSArray * __nonnull)constraints;
 
 #pragma mark Managing Nodes Layout
 
