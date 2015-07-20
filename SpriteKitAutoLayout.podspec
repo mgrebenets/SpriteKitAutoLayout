@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SpriteKitAutoLayout"
-  s.version          = "0.3.1"
+  s.version          = "0.4.0"
   s.summary          = "Auto Layout support for SpriteKit (iOS & OSX)"
   s.description      = <<-DESC
                        This library enables Auto Layout support for SpriteKit.
@@ -16,9 +16,9 @@ Pod::Spec.new do |s|
   # all platforms, so no s.platform here
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes'
-  s.public_header_files = ['Pod/Classes/**/*.h']
-  s.private_header_files = ['Pod/Classes/**/*Internal*.h']
+  s.source_files = 'Source'
+  s.public_header_files = ['Source/**/*.h']
+  s.private_header_files = ['Source/**/*Internal*.h']
   s.frameworks = 'SpriteKit'
 #s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS[config=Debug]' => '$(inherited) SKAL_DEBUG=1' }
 end

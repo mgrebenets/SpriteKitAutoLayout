@@ -19,7 +19,7 @@ class CommonScene: SKScene {
         addChild(backButton)
 
         // back button
-        let nodesDic = self.nodesDic()
+        let nodesDic = self.nodesDic
 
         var format = "H:|[\(BackButtonName)(80)]"
         var constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
@@ -36,8 +36,8 @@ class CommonScene: SKScene {
     }
 
     #if os(iOS)
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        let touch = touches.allObjects.first! as UITouch
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let touch = touches.first!
         let touchLocation = touch.locationInNode(self)
         handleTouchBeganAtLocation(touchLocation)
     }
@@ -61,7 +61,7 @@ class CommonScene: SKScene {
 
     func goBack() {
         let skView = self.view! as SKView
-        var scene = MainScene(size: view!.frame.size)
+        let scene = MainScene(size: view!.frame.size)
         scene.scaleMode = .ResizeFill
         skView.presentScene(scene)
     }

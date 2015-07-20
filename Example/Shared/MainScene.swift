@@ -6,13 +6,15 @@
 //  Copyright (c) 2014 Maksym Grebenets. All rights reserved.
 //
 
+import SpriteKit
+
 class MainScene: CommonScene {
     override func didMoveToView(view: SKView) {
 
         self.name = "MainScene"
 
         for i in 1...3 {
-            var label = SKLabelNode()
+            let label = SKLabelNode()
             label.text = "Demo \(i)"
             label.name = "label\(i)"
             label.horizontalAlignmentMode = .Right
@@ -20,12 +22,12 @@ class MainScene: CommonScene {
             label.autoLayoutEnabled = true
             addChild(label)
 
-            var c = NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 1)
+            let c = NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 1)
             addConstraint(c)
         }
 
-        var format = "V:|-20-[label1]-20-[label2(label1)]-20-[label3(label1)]-40-|"
-        var constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic())
+        let format = "V:|-20-[label1]-20-[label2(label1)]-20-[label3(label1)]-40-|"
+        let constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
         addConstraints(constraints)
     }
 
@@ -44,11 +46,9 @@ class MainScene: CommonScene {
         if let scene = scene {
             let skView = self.view! as SKView
             scene.scaleMode = .ResizeFill
-            println("===Subviews count before: \(skView.subviews.count)")
-//            println("===Constraints count before: \(skView.constraints().count)")
+            print("===Subviews count before: \(skView.subviews.count)")
             skView.presentScene(scene)
-            println("===Subviews count after: \(skView.subviews.count)")
-//            println("===Constraints count after: \(skView.constraints().count)")            
+            print("===Subviews count after: \(skView.subviews.count)")
         }
     }
 }

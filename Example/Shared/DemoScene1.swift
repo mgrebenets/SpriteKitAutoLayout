@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import SpriteKitAutoLayout
 
 class DemoScene1: CommonScene {
     override func didMoveToView(view: SKView) {
@@ -76,13 +77,13 @@ class DemoScene1: CommonScene {
         addChild(buttonsNode)
 
         // buttons inside buttons node
-        var button1 = SKSpriteNode(color: SKColor.redColor(), size: CGSizeZero)
+        let button1 = SKSpriteNode(color: SKColor.redColor(), size: CGSizeZero)
         button1.name = "button1"
         button1.autoLayoutEnabled = true
-        var button2 = SKSpriteNode(color: SKColor.brownColor(), size: CGSizeZero)
+        let button2 = SKSpriteNode(color: SKColor.brownColor(), size: CGSizeZero)
         button2.name = "button2"
         button2.autoLayoutEnabled = true
-        var button3 = SKSpriteNode(color: SKColor.orangeColor(), size: CGSizeZero)
+        let button3 = SKSpriteNode(color: SKColor.orangeColor(), size: CGSizeZero)
         button3.name = "button3"
         button3.autoLayoutEnabled = true
 
@@ -91,12 +92,12 @@ class DemoScene1: CommonScene {
 
 
         // All the nodes are added, cached child nodes dictionary ro reuse later
-        let nodesDic = self.nodesDic()
+        let nodesDic = self.nodesDic
 
-        let buttonsNodesDic = buttonsNode.nodesDic()
+        let buttonsNodesDic = buttonsNode.nodesDic
 
         var format = ""
-        var constraints = [AnyObject]()
+        var constraints = [NSLayoutConstraint]()
 
         // labels layout
         format = "H:|[label1(\(Float(label2.frame.width)))]"
