@@ -25,16 +25,20 @@ SpriteKitAutoLayout is available through [CocoaPods](http://cocoapods.org). To i
 Start with including the header file.
 
 ```objective-c
-#import <SpriteKitAutoLayout/SpriteKitAutoLayout.h>
+// Objective-C
+@import SpriteKitAutoLayout;
 ```
 
-Put it in your Bridging Header if your project is Swift project.
+```swift
+// Swift
+import SpriteKitAutoLayout
+```
 
 That's pretty much it in regards to configuration, now you can use Auto Layout for SpriteKit nodes the same way you do that for UIKit/AppKit views.
 
 The major difference is that you have to set `autoLayoutEnabled` to `true`, this is similar to setting `translatesAutoresizingMaskIntoConstraints` to `NO` in UIKit/AppKit.
 
-You also have to call `layoutNodes` method of `SKScene` excplicitly. The best way to do that is in `didChangeSize:` implementation. Note, that you have to dispatch it asynchronously on main queue if you want you UI updates to be properly applied.
+You also have to call `layoutNodes` method of `SKScene` explicitly. The best way to do that is in `didChangeSize:` implementation. Note, that you have to dispatch it asynchronously on main queue if you want you UI updates to be properly applied.
 
 ```swift
 import SpriteKit
@@ -49,19 +53,19 @@ class DemoScene: SKScene {
         // Add label to put it left bottom corner
         let leftBottomLabel = SKLabelNode()
         leftBottomLabel.text = "Left Bottom"
-        leftBottomLabel.name = "leftBottomLabel"    // a C language identifier
-        leftBottomLabel.autoLayoutEnabled = true    // enable autolayout for this node
+        leftBottomLabel.name = "leftBottomLabel"
+        leftBottomLabel.autoLayoutEnabled = true    // Enable auto layout for this node
         addChild(leftBottomLabel)
 
         // Add color sprite with non-default anchor point to put in the center
         let centerSprite = SKSpriteNode(color: SKColor.greenColor(), size: CGSizeZero)
         centerSprite.name = "centerSprite"
-        centerSprite.anchorPoint = CGPoint(x: 1, y: 1)  // non-default anchor point
+        centerSprite.anchorPoint = CGPoint(x: 1, y: 1)  // Non-default anchor point
         centerSprite.autoLayoutEnabled = true
         addChild(centerSprite)
 
         // Get dictionary of all nodes in this scene
-        let nodesDic = self.nodesDic()  // self. is required to avoid compile error
+        let nodesDic = self.nodesDic  // self. is required to avoid compile error
 
         // Configure Auto Layout constraints
 
@@ -69,18 +73,18 @@ class DemoScene: SKScene {
         let width = Float(leftBottomLabel.frame.width)
         var format = "H:|[leftBottomLabel(\(width))]"
         var constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
-        addConstraints(constraints) // add constraints
+        addConstraints(constraints)
 
         let height = Float(leftBottomLabel.frame.height)
         format = "V:|[leftBottomLabel(\(height))]"
         constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: nodesDic)
-        addConstraints(constraints) // add constraints
+        addConstraints(constraints)
 
         // Put color sprite in the center
         // Make it's size related to parent (aka "superview")
 
         // Constraint center (x, y) to parent's (x, y)
-        // it's save to do it here because parent is skene filling whole SKView
+        // It's save to do it here because parent is scene filling whole SKView
         var constraint = NSLayoutConstraint(item: centerSprite, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0)
         addConstraint(constraint)
         constraint = NSLayoutConstraint(item: centerSprite, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0)
@@ -107,7 +111,7 @@ class DemoScene: SKScene {
 
 Want to use it with other Auto Layout wrappers and helpers?
 
-No problem, use SKNode's `layoutProxyView()` read-only property exposed since `0.2.0`.
+No problem, use SKNode's `layoutProxyView` read-only property exposed since `0.2.0`.
 
 For example, this is what you code would look like with [Cartography](https://github.com/robb/Cartography).
 
@@ -116,10 +120,10 @@ let button = SKSpriteNode(color: SKColor.greenColor(), size: CGSizeZero)
 button.autoLayoutEnabled = true
 addChild(button)
 
-layout(button.layoutProxyView()) { button in
+layout(button.layoutProxyView { button in
     // button in closure is not the same as 'let button' declared before
-    button.left == button.superview!.left   // same as "H:|[button]"
-    button.bottom == button.superview!.bottom   // same as "V:|[button]"
+    button.left == button.superview!.left   // Same as "H:|[button]"
+    button.bottom == button.superview!.bottom   // Same as "V:|[button]"
     button.height == button.superview!.height * 0.1
     button.width == button.height
 }
@@ -131,14 +135,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-Just like SpriteKit itself SpriteKitAutoLayout is available both for iOS and OSX platforms.
+Just like SpriteKit itself SpriteKitAutoLayout is available both for iOS and OS X platforms.
 
 - Min iOS version is 7.0
-- Min OSX version is 10.9
+- Min OS X version is 10.9
 
 ## Limitations & Issues
 
-- Setting constraints for SKLabelNode is tricky if you want to use `.CenterX`, `.CenterY` or other attributes.
+- Setting constraints for `SKLabelNode` is tricky if you want to use `.CenterX`, `.CenterY` or other attributes.
 - No support for intrinsic size on labels and sprites.
 
 ## Roadmap
@@ -155,4 +159,3 @@ Maksym Grebenets, mgrebenets@gmail.com
 ## License
 
 SpriteKitAutoLayout is available under the MIT license. See the LICENSE file for more info.
-

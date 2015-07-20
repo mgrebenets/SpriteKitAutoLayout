@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "19DB46BE3402FC4F9E9BBA0959CD367BB8492C47",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "51B94C976C9402F33115802684FFBC10F1E841D6" : 0,
+    "19DB46BE3402FC4F9E9BBA0959CD367BB8492C47" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "143B61E5-6ED5-4196-B8C0-78F036AF6081",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "51B94C976C9402F33115802684FFBC10F1E841D6" : "..",
+    "19DB46BE3402FC4F9E9BBA0959CD367BB8492C47" : "SpriteKitAutoLayout\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SpriteKitAutoLayout",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SpriteKitAutoLayout.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:mgrebenets\/SpriteKitAutoLayout.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "19DB46BE3402FC4F9E9BBA0959CD367BB8492C47"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:i4niac\/kartoteka-reloaded.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "51B94C976C9402F33115802684FFBC10F1E841D6"
+    }
+  ]
+}
